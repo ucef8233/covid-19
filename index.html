@@ -5,42 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <title>Document</title>
 </head>
-<header class="header">
-  <nav>
-    <div class="header__logo"> <img src="Design/Assets/png/logo__sante-48.png" "
-        alt=" Ministère de la Santé" title="Ministère de la Santé"></div>
-    <div class="header__menu">
-      <a href="#">Conseil</a>
-      <a href="#">Accueil</a>
-      <a href="#">ﻋﺮﺑﻲ</a>
+
+<body>
+  <header class="header"> </header>
+  <main class="main">
+    <img class="main__img" src="Design/Assets/png/Group_80.png" alt="Groupe de médecine" title="Groupe de médecine">
+    <div class="main__text">
+      <p class="main__parag main__parag--color"> Vous pensez avoir été exposé au <br> Coronavirus COVID-19 et avez des
+        symptômes ?</p>
+      <img src="Design/Assets/png/1f637.png" alt="émoticone malade" title="émoticone malade">
+      <p class="main__parag">Je reste vigilant ? <br> Je programme une téléconsultation ? <br> J'appelle le 15 ? <br>
+        Faites le test pour
+        répondre en citoyen <br> éclairé selon vos symptômes.
+      </p>
+      <div class="main__btn">
+        <a href="#">Demarer le test
+        </a></div>
     </div>
-  </nav>
-  <div class="header__text">
-    <h3 class="header__title">LA DERNIÈRE INFO MÉDICALE </h3>
-    <p class="header__parag">La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur
-      d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol. <br> N'arrêtez pas votre traitement
-      !
-      Consultez
-      votre médecin ou votre pharmacien. </p>
+  </main>
+  <div class="symptomes">
+    <h1 class="symptomes__title">Quels sont les symptômes à surveiller ?</h1>
   </div>
-</header>
-<main class="main">
-  <img class="main__img" src="Design/Assets/png/Group_80.png" alt="Groupe de médecine" title="Groupe de médecine">
-  <div class="main__text">
-    <p class="main__parag main__parag--color"> Vous pensez avoir été exposé au <br> Coronavirus COVID-19 et avez des
-      symptômes ?</p>
-    <img src="Design/Assets/png/1f637.png" alt="émoticone malade" title="émoticone malade">
-    <p class="main__parag">Je reste vigilant ? <br> Je programme une téléconsultation ? <br> J'appelle le 15 ? <br>
-      Faites le test pour
-      répondre en citoyen <br> éclairé selon vos symptômes.
-    </p>
-    <div class="main__btn">
-      <a href="#">Demarer le test
-      </a></div>
-  </div>
-</main>
 </body>
+<script>
+  $(document).ready(function () {
+    $('header').load("hero/header.html");
+  });
+</script>
 
 </html>

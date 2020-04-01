@@ -1,0 +1,194 @@
+@media only screen and (max-width: 1745px) {
+  .main {
+    &__text {
+      font-size: 0.8rem !important;
+
+      a {
+        font-size: 0.8rem !important;
+      }
+
+      img {
+        width: 5em;
+        margin-left: 47%;
+      }
+    }
+
+    &__img {
+      height: 32em;
+    }
+  }
+}
+
+@media only screen and (max-width: 1415px) {
+  .main {
+    &__text {
+      font-size: 0.6rem !important;
+
+      a {
+        font-size: 0.6rem !important;
+      }
+
+      img {
+        width: 4em;
+        margin-left: 47%;
+      }
+    }
+
+    &__img {
+      height: 22em;
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .main {
+    flex-wrap: wrap;
+
+    &__text {
+
+      font-size: 0.4rem !important;
+    }
+
+    &__img {
+      height: 17em;
+    }
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  * {
+    font-size: 0.9rem !important;
+  }
+
+  .header {
+    &__logo {
+      img {
+        width: 4em;
+
+      }
+    }
+  }
+
+  .main {
+    padding: 2em;
+    margin-left: 1em;
+
+    &__img {
+      width: 100%;
+
+    }
+
+    &__parag {
+      font-size: 3em !important;
+
+    }
+
+    &__text {
+
+      font-size: 0.6rem !important;
+      text-align: center;
+
+      img {
+        margin-left: 0% !important;
+      }
+    }
+
+    &__btn {
+      padding: 1.3em 4em;
+
+      a {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 540px) {
+  * {
+    font-size: 0.87rem !important;
+  }
+
+  .main {
+    &__img {
+      height: 25em;
+    }
+
+    &__text {
+      font-size: .5rem !important;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    * {
+      font-size: 0.8rem !important;
+    }
+
+    .header {
+      &__parag {
+        width: 30em;
+        color: black;
+        font-weight: 700;
+        padding-bottom: 0.5em;
+
+      }
+
+      &__text {
+        line-height: 1.9 !important;
+      }
+
+      &__logo {
+        img {
+          width: 4.5em;
+        }
+      }
+
+      &__menu {
+        a {
+          font-size: 1.3em !important;
+          margin-right: 1em;
+        }
+      }
+
+      &__title {
+        font-size: 1.4em !important;
+        padding-top: 0.2em;
+        color: $btn_color;
+      }
+    }
+
+    .main {
+      padding: 0em;
+
+      &__img {
+        height: 28em;
+        width: 96%;
+        padding-top: 2em;
+      }
+
+      &__parag {
+        font-size: 0.9em !important;
+        max-width: 22em;
+        margin: 0px auto;
+
+        &--color {
+          font-size: 1.2em !important;
+          margin-left: 1.6em;
+        }
+      }
+
+      &__text {
+        font-size: 1.2em !important;
+        line-height: 1.5;
+        padding-top: 1.3em;
+
+        img {
+          width: 4.5em;
+          margin-left: 0%;
+          margin: 1.8em 0em 1.2em 0em;
+        }
+      }
+    }
+  }
+}
