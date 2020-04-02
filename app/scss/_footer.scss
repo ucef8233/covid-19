@@ -62,4 +62,72 @@
       font-size: 2.5em;
     }
   }
+
+  &__contacte {
+    margin: 2em 3em 4em 4em;
+
+    &__logo {
+      text-align: center;
+
+
+      img {
+        width: 7em;
+      }
+    }
+
+    &__parts {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+    }
+
+    &__part1 {
+      display: flex;
+      flex-direction: column;
+      width: 17%;
+
+      a {
+        font-size: 2em;
+        color: black;
+        line-height: 2.7;
+        text-align: center;
+
+        img {
+          width: 7em;
+        }
+      }
+    }
+
+    &__part2 {
+      text-align: center;
+      width: 38%;
+      line-height: 2.2;
+    }
+
+    &__utiles {
+      font-size: 2.4em;
+      font-weight: 700;
+      color: $btn_color;
+    }
+
+    &__aide {
+      font-size: 1.7em;
+    }
+
+    &__num {
+      color: $num_color;
+      font-size: 2.4em;
+    }
+
+    &__part3 {
+      width: 45%;
+      font-size: 1.6em;
+      font-weight: 500;
+      color: $color2;
+      display: flex;
+      align-items: center;
+      line-height: 2;
+
+    }
+  }
 }
