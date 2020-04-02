@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/normalize.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <title>Document</title>
 </head>
 
 <body>
-  <header class="header"> </header>
+  <header class="header"> 
+
+  </header>
   <main class="main">
-    <img class="main__img" src="Design/Assets/png/Group_80.png" alt="Groupe de médecine" title="Groupe de médecine">
+    <img class="main__img" src="Design/Assets/png/Groupe76.png" alt="Groupe de médecine" title="Groupe de médecine">
     <div class="main__text">
       <p class="main__parag main__parag--color"> Vous pensez avoir été exposé au <br> Coronavirus COVID-19 et avez des
         symptômes ?</p>
@@ -28,10 +28,31 @@
         </a></div>
     </div>
   </main>
-  <div class="symptomes">
+  <!-- <div class="symptomes">
     <h1 class="symptomes__title">Quels sont les symptômes à surveiller ?</h1>
-  </div>
+  </div> -->
+  <footer class="footer">
+    <div class="footer__recommmandation">
+
+    </div>
+    <div class="footer__test">
+
+    </div>
+    <div class="footer__contacte">
+
+    </div>
+  </footer>
 </body>
+<script>
+  $(document).ready(function () {
+    $('.footer__recommmandation').load("hero/footer_.html");
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('.footer__contacte').load("hero/footer__.html");
+  });
+</script>
 <script>
   $(document).ready(function () {
     $('header').load("hero/header.html");

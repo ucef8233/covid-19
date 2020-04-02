@@ -1,0 +1,65 @@
+.footer {
+  &__recommmandation {
+    background-color: $btn_color;
+    padding: 3em 6em 3em 6em;
+
+    &__title {
+      text-align: center;
+      color: $ot_color;
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+
+    &__parts {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__part1 {
+      width: 65%;
+      line-height: 1.7;
+    }
+
+    &__parag {
+      color: white;
+      font-size: 2.7em;
+      font-weight: 600;
+
+      &--color {
+        color: black;
+        font-weight: 700;
+      }
+    }
+
+    &__part2 {
+      text-align: center;
+      margin: 4em 2em;
+      line-height: 2.8;
+    }
+
+    &__size {
+      font-size: 2.7em;
+      font-weight: 700;
+    }
+
+    &__appel {
+      color: $bg_color;
+
+    }
+
+    &__numero {
+      color: $btn_color;
+      padding: 0em 1em;
+      background-color: $bg_color;
+      border-radius: 5px;
+    }
+
+    &__site {
+      font-weight: 500;
+      color: white;
+      border-bottom: 2px solid $bg_color;
+      font-size: 2.5em;
+    }
+  }
+}

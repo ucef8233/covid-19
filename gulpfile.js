@@ -8,7 +8,6 @@ const concat = require("gulp-concat");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
-const fileinclude = require("gulp-file-include");
 
 // File paths
 const files = {
