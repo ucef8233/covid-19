@@ -18,87 +18,122 @@
       height: 32em;
     }
   }
+}
 
-  .footer {
-    &__recommmandation {
+.footer {
+  &__recommmandation {
 
-      &__parag {
-        font-size: 1.8rem !important;
-      }
-
-      &__size {
-        font-size: 1.8rem !important;
-      }
+    &__parag {
+      font-size: 1.8rem !important;
     }
 
-    &__contacte {
-      &__part1 {
-        a {
-          font-size: 1.6em !important;
-        }
-      }
+    &__size {
+      font-size: 1.8rem !important;
+    }
+  }
 
-      &__utiles {
-        font-size: 1.9em !important;
-      }
+  &__test {
+    &__title {
+      font-size: 2.1em !important;
+    }
 
-      &__aide {
-        font-size: 1.4em !important;
-      }
-
-      &__num {
-        font-size: 1.9em;
-      }
-
-      &__part3 {
-        font-size: 1.5em !important;
+    &__btn {
+      a {
+        font-size: 2.3em !important;
       }
     }
   }
 
-  @media only screen and (max-width: 1415px) {
-    .main {
-      &__text {
+  &__contacte {
+    &__part1 {
+      a {
+        font-size: 1.6em !important;
+      }
+    }
+
+    &__utiles {
+      font-size: 1.9em !important;
+    }
+
+    &__aide {
+      font-size: 1.4em !important;
+    }
+
+    &__num {
+      font-size: 1.9em;
+    }
+
+    &__part3 {
+      font-size: 1.5em !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1415px) {
+  .main {
+    &__text {
+      font-size: 0.6rem !important;
+
+      a {
         font-size: 0.6rem !important;
+      }
+
+      img {
+        width: 4em;
+        margin-left: 47%;
+      }
+    }
+
+    &__img {
+      height: 22em;
+    }
+  }
+
+  .footer {
+    &__contacte {
+
+      &__part1 {
+        a {
+          font-size: 1.2em !important;
+        }
+      }
+
+      &__utiles {
+        font-size: 1.5em !important;
+      }
+
+      &__aide {
+        font-size: 1em !important;
+      }
+
+      &__num {
+        font-size: 1.5em;
+      }
+
+      &__part3 {
+        font-size: 1em !important;
+      }
+    }
+
+    &__test {
+      &__title {
+        font-size: 1.8em !important;
+      }
+
+      &__btn {
+        padding: .7em 15em !important;
 
         a {
-          font-size: 0.6rem !important;
-        }
-
-        img {
-          width: 4em;
-          margin-left: 47%;
+          font-size: 2.1em !important;
         }
       }
 
       &__img {
-        height: 22em;
-      }
-    }
+        margin: 1.2em 0em !important;
 
-    .footer {
-      &__contacte {
+        img {
+          width: 5em !important;
 
-        &__part1 {
-          a {
-            font-size: 1.2em !important;
-          }
-        }
-
-        &__utiles {
-          font-size: 1.5em !important;
-        }
-
-        &__aide {
-          font-size: 1em !important;
-        }
-
-        &__num {
-          font-size: 1.5em;
-        }
-
-        &__part3 {
-          font-size: 1em !important;
         }
       }
     }
@@ -108,7 +143,7 @@
 
 @media only screen and (max-width: 1080px) {
   .main {
-    flex-wrap: wrap;
+
 
     &__text {
 
@@ -132,6 +167,22 @@
       &__size {
         font-size: 1rem !important;
       }
+    }
+
+    &__test {
+      &__title {
+        font-size: 1.1em !important;
+      }
+
+      &__btn {
+
+        padding: .7em 12em !important;
+
+        a {
+          font-size: 1.6em !important;
+        }
+      }
+
     }
 
     &__contacte {
@@ -187,6 +238,7 @@
   .main {
     padding: 2em;
     margin-left: 1em;
+    flex-wrap: wrap;
 
     &__img {
       width: 100%;
@@ -268,6 +320,16 @@
         margin: 1em !important;
       }
     }
+
+    &__test {
+      &__btn {
+        padding: .7em 12em;
+
+        a {
+          font-size: 1.2em;
+        }
+      }
+    }
   }
 }
 
@@ -345,7 +407,7 @@
     &__recommmandation {
       text-align: center;
       padding: 3em 1.2em 0em 1.2em !important;
-      margin: 1em auto !important;
+      margin: 0em auto !important;
 
       &__title {
         font-size: 1.7em !important;
@@ -372,6 +434,33 @@
           display: none;
         }
       }
+    }
+
+    &__test {
+      padding: 1em 0em !important;
+
+      &__title {
+        font-size: 0.9em !important;
+      }
+
+      &__btn {
+
+        padding: .7em 6em !important;
+
+        a {
+          font-size: 1.2em !important;
+        }
+      }
+
+      &__img {
+        margin: 0.8em 0em 0.5em 0em !important;
+
+        img {
+          width: 2em !important;
+
+        }
+      }
+
     }
   }
 }
