@@ -129,5 +129,11 @@
       line-height: 2;
 
     }
+
+    &__color {
+      height: 2em;
+      background-color: $btn_color;
+      margin: 0em -0.5em;
+    }
   }
 }

@@ -30,28 +30,80 @@
         font-size: 1.8rem !important;
       }
     }
+
+    &__contacte {
+      &__part1 {
+        a {
+          font-size: 1.6em !important;
+        }
+      }
+
+      &__utiles {
+        font-size: 1.9em !important;
+      }
+
+      &__aide {
+        font-size: 1.4em !important;
+      }
+
+      &__num {
+        font-size: 1.9em;
+      }
+
+      &__part3 {
+        font-size: 1.5em !important;
+      }
+    }
   }
-}
 
-@media only screen and (max-width: 1415px) {
-  .main {
-    &__text {
-      font-size: 0.6rem !important;
-
-      a {
+  @media only screen and (max-width: 1415px) {
+    .main {
+      &__text {
         font-size: 0.6rem !important;
+
+        a {
+          font-size: 0.6rem !important;
+        }
+
+        img {
+          width: 4em;
+          margin-left: 47%;
+        }
       }
 
-      img {
-        width: 4em;
-        margin-left: 47%;
+      &__img {
+        height: 22em;
       }
     }
 
-    &__img {
-      height: 22em;
+    .footer {
+      &__contacte {
+
+        &__part1 {
+          a {
+            font-size: 1.2em !important;
+          }
+        }
+
+        &__utiles {
+          font-size: 1.5em !important;
+        }
+
+        &__aide {
+          font-size: 1em !important;
+        }
+
+        &__num {
+          font-size: 1.5em;
+        }
+
+        &__part3 {
+          font-size: 1em !important;
+        }
+      }
     }
   }
+
 }
 
 @media only screen and (max-width: 1080px) {
@@ -81,6 +133,32 @@
         font-size: 1rem !important;
       }
     }
+
+    &__contacte {
+      &__logo {
+        img {
+          width: 5em !important;
+        }
+      }
+
+      &__parts {
+        flex-wrap: wrap;
+      }
+
+      &__part1 {
+        width: 40% !important;
+      }
+
+      &__part2 {
+        width: 60% !important;
+      }
+
+      &__part3 {
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+    }
   }
 }
 
@@ -90,6 +168,14 @@
   }
 
   .header {
+    &__menu {
+      a {
+        img {
+          width: 4.5em;
+        }
+      }
+    }
+
     &__logo {
       img {
         width: 4em;
@@ -109,13 +195,16 @@
 
     &__parag {
       font-size: 3em !important;
+      text-align: center;
+
 
     }
 
     &__text {
-
+      width: 100%;
       font-size: 0.6rem !important;
       text-align: center;
+
 
       img {
         margin-left: 0% !important;
@@ -123,12 +212,23 @@
     }
 
     &__btn {
-      padding: 1.3em 4em;
+      padding: 1.3em 11em;
+      display: inline-block;
 
       a {
         font-size: 1rem !important;
       }
     }
+  }
+
+  .footer {
+    &__contacte {
+      margin: 1em !important;
+
+
+    }
+
+
   }
 }
 
@@ -178,7 +278,7 @@
 
   .header {
     &__parag {
-      width: 30em;
+      width: 35em;
       color: black;
       font-weight: 700;
       padding-bottom: 0.5em;
