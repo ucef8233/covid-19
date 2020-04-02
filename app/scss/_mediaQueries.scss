@@ -1,4 +1,5 @@
 @media only screen and (max-width: 1745px) {
+
   .main {
     &__text {
       font-size: 0.8rem !important;
@@ -15,6 +16,19 @@
 
     &__img {
       height: 32em;
+    }
+  }
+
+  .footer {
+    &__recommmandation {
+
+      &__parag {
+        font-size: 1.8rem !important;
+      }
+
+      &__size {
+        font-size: 1.8rem !important;
+      }
     }
   }
 }
@@ -51,6 +65,21 @@
 
     &__img {
       height: 17em;
+    }
+  }
+
+  .footer {
+    &__recommmandation {
+
+      padding: 1em 2em !important;
+
+      &__parag {
+        font-size: 1.2em !important;
+      }
+
+      &__size {
+        font-size: 1rem !important;
+      }
     }
   }
 }
@@ -105,7 +134,7 @@
 
 
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 570px) {
   * {
     font-size: 0.87rem !important;
   }
@@ -120,73 +149,127 @@
     }
   }
 
-  @media only screen and (max-width: 375px) {
-    * {
-      font-size: 0.8rem !important;
+  .footer {
+    &__recommmandation {
+      text-align: center;
+      padding: 3em 1.2em 0em 1.2em !important;
+      margin: 1em auto !important;
+
+      &__parts {
+        flex-wrap: wrap;
+      }
+
+      &__part1 {
+        width: 100% !important;
+      }
+
+      &__part2 {
+        width: 100% !important;
+        margin: 1em !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  * {
+    font-size: 0.8rem !important;
+  }
+
+  .header {
+    &__parag {
+      width: 30em;
+      color: black;
+      font-weight: 700;
+      padding-bottom: 0.5em;
     }
 
-    .header {
-      &__parag {
-        width: 30em;
-        color: black;
-        font-weight: 700;
-        padding-bottom: 0.5em;
+    &__text {
+      line-height: 1.9 !important;
+    }
 
+    &__logo {
+      img {
+        width: 4.5em;
       }
+    }
 
-      &__text {
-        line-height: 1.9 !important;
+    &__menu {
+      a {
+        font-size: 1.3em !important;
+        margin-right: 1em;
       }
+    }
 
-      &__logo {
-        img {
-          width: 4.5em;
-        }
-      }
+    &__title {
+      font-size: 1.4em !important;
+      padding-top: 0.2em;
+      color: $btn_color;
+    }
+  }
 
-      &__menu {
-        a {
-          font-size: 1.3em !important;
-          margin-right: 1em;
-        }
+  .main {
+    padding: 0em;
+
+    &__img {
+      height: 28em;
+      width: 96%;
+      padding-top: 2em;
+    }
+
+    &__parag {
+      font-size: 0.9em !important;
+      max-width: 22em;
+      margin: 0px auto;
+
+      &--color {
+        font-size: 1.2em !important;
+        margin-left: 1.6em;
       }
+    }
+
+    &__text {
+      font-size: 1.2em !important;
+      line-height: 1.5;
+      padding-top: 1.3em;
+
+      img {
+        width: 4.5em;
+        margin-left: 0%;
+        margin: 1.8em 0em 1.2em 0em;
+      }
+    }
+  }
+
+  .footer {
+    &__recommmandation {
+      text-align: center;
+      padding: 3em 1.2em 0em 1.2em !important;
+      margin: 1em auto !important;
 
       &__title {
-        font-size: 1.4em !important;
-        padding-top: 0.2em;
-        color: $btn_color;
+        font-size: 1.7em !important;
       }
-    }
 
-    .main {
-      padding: 0em;
+      &__size {
+        font-size: 1.5em !important;
+      }
 
-      &__img {
-        height: 28em;
-        width: 96%;
-        padding-top: 2em;
+      &__numero {
+        padding: 0em !important;
+        font-size: 2em !important;
       }
 
       &__parag {
-        font-size: 0.9em !important;
-        max-width: 22em;
-        margin: 0px auto;
+        font-size: 1.4em !important;
+        font-weight: 600;
 
         &--color {
-          font-size: 1.2em !important;
-          margin-left: 1.6em;
+          color: white !important;
         }
-      }
 
-      &__text {
-        font-size: 1.2em !important;
-        line-height: 1.5;
-        padding-top: 1.3em;
-
-        img {
-          width: 4.5em;
-          margin-left: 0%;
-          margin: 1.8em 0em 1.2em 0em;
+        span {
+          display: none;
         }
       }
     }
