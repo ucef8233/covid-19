@@ -1,3 +1,4 @@
+//   (max-width: 1745px) ////////////////////////////////////////////////////
 @media only screen and (max-width: 1745px) {
 
   .main {
@@ -5,7 +6,7 @@
       font-size: 0.8rem !important;
 
       a {
-        font-size: 0.8rem !important;
+        font-size: 1.6rem !important;
       }
 
       img {
@@ -69,13 +70,18 @@
   }
 }
 
+//   (max-width: 1415px) ////////////////////////////////////////////////////
 @media only screen and (max-width: 1415px) {
   .main {
+    &__btn {
+      padding: .7em 10em;
+    }
+
     &__text {
       font-size: 0.6rem !important;
 
       a {
-        font-size: 0.6rem !important;
+        font-size: 1.5rem !important;
       }
 
       img {
@@ -141,13 +147,20 @@
 
 }
 
+//   (max-width: 1080px) ////////////////////////////////////////////////////
 @media only screen and (max-width: 1080px) {
   .main {
-
+    &__btn {
+      padding: .7em 7em;
+    }
 
     &__text {
 
       font-size: 0.4rem !important;
+
+      a {
+        font-size: 0.8rem !important;
+      }
     }
 
     &__img {
@@ -213,6 +226,7 @@
   }
 }
 
+//   (max-width: 790px) ////////////////////////////////////////////////////
 @media only screen and (max-width: 790px) {
   * {
     font-size: 0.9rem !important;
@@ -285,7 +299,7 @@
 }
 
 
-
+//   (max-width: 570px) ////////////////////////////////////////////////////
 @media only screen and (max-width: 570px) {
   * {
     font-size: 0.87rem !important;
@@ -305,7 +319,7 @@
     &__recommmandation {
       text-align: center;
       padding: 3em 1.2em 0em 1.2em !important;
-      margin: 1em auto !important;
+      margin: 0em auto !important;
 
       &__parts {
         flex-wrap: wrap;
@@ -333,6 +347,7 @@
   }
 }
 
+//   (max-width: 375px) ////////////////////////////////////////////////////
 @media only screen and (max-width: 375px) {
   * {
     font-size: 0.8rem !important;

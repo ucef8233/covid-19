@@ -3,12 +3,4 @@
 @import "acceuil";
 @import "mediaQueries";
 @import "footer";
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 1rem;
-  text-decoration: none;
-  font-family: 'Cairo',
-    sans-serif;
-}
+@import "variable";
