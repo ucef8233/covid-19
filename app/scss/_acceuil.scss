@@ -49,6 +49,17 @@
 
 //////////////symptomes////////////////
 .symptomes {
+  width: 65%;
+  margin: 2em auto;
+
+  &__image {
+    width: 60% !important;
+
+    &--marge {
+      width: 55% !important;
+    }
+  }
+
   &__title {
     text-align: center;
     font-size: 3em;
@@ -57,26 +68,30 @@
   }
 
   &__categories {
-    width: 50%;
-    margin: 2em auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    text-align: center;
   }
 
-  &__image {
-    width: 5em !important;
-  }
+
 
   &__categorie {
+    &--1 {
+      margin-left: 6em;
+    }
+
+    &--2 {
+      margin-left: 4em;
+    }
+
     img {
-      width: 12em;
-      margin-bottom: 2em;
+      width: 60%;
+      margin-bottom: 3em;
     }
 
     &__parag {
       font-size: 2.7em;
       font-weight: 700;
-      text-align: center;
     }
   }
 

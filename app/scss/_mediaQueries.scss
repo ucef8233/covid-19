@@ -95,6 +95,10 @@
     }
   }
 
+  .symptomes {
+    font-size: 0.8em;
+  }
+
   .footer {
     &__contacte {
 
@@ -165,6 +169,34 @@
 
     &__img {
       height: 17em;
+    }
+  }
+
+  .symptomes {
+    &__title {
+      font-size: 2em !important;
+    }
+
+    &__image {
+      width: 40% !important;
+
+      &--marge {
+        width: 35% !important;
+      }
+    }
+
+    &__categorie {
+      &__parag {
+        font-size: 2em !important;
+      }
+
+      &--1 {
+        margin-left: 3em !important;
+      }
+
+      &--2 {
+        margin-left: 2em !important;
+      }
     }
   }
 
@@ -284,6 +316,39 @@
       a {
         font-size: 1rem !important;
       }
+    }
+  }
+
+  .symptomes {
+    &__title {
+      font-size: 1.7em !important;
+    }
+
+    &__image {
+      width: 30% !important;
+
+      &--marge {
+        width: 25% !important;
+      }
+    }
+
+    &__categorie {
+      img {
+        margin-bottom: 1em !important;
+      }
+
+      &__parag {
+        font-size: 1.4em !important;
+      }
+
+      &--1 {
+        margin-left: 3em !important;
+      }
+
+      &--2 {
+        margin-left: 2em !important;
+      }
+
     }
   }
 
