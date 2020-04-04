@@ -547,7 +547,22 @@
 }
 
 //// page conseil ////////////////////////////////////////////////
-@media only screen and (max-width: 1745px) {}
+@media only screen and (max-width: 1745px) {
+  .main {
+    &__info {
+      padding: 2% !important;
+
+      &__title {
+        font-size: 2em !important;
+        margin-bottom: 5% !important;
+      }
+
+      &__parag {
+        font-size: 1.5em !important;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 1415px) {
 
@@ -592,6 +607,24 @@
           font-size: 1.1em !important;
           color: black;
         }
+      }
+    }
+
+    &__info {
+      flex-wrap: wrap;
+
+      &__part1 {
+        margin: 0em auto;
+      }
+
+      &__links {
+        flex-direction: column;
+        width: 100% !important;
+
+        a {
+          margin: 1em;
+        }
+
       }
     }
   }
