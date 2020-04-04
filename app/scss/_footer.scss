@@ -1,0 +1,181 @@
+//// footer_recommandation ////////////////////////////////////////////////
+.footer {
+  &__recommmandation {
+    background-color: $btn_color;
+    padding: 3em 6em 3em 6em;
+
+    &__title {
+      text-align: center;
+      color: $ot_color;
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+
+    &__parts {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__part1 {
+      width: 65%;
+      line-height: 1.7;
+    }
+
+    &__parag {
+      color: white;
+      font-size: 2.7em;
+      font-weight: 600;
+
+      &--color {
+        color: black;
+        font-weight: 700;
+      }
+    }
+
+    &__part2 {
+      text-align: center;
+      margin: 4em 2em;
+      line-height: 2.8;
+    }
+
+    &__size {
+      font-size: 2.7em;
+      font-weight: 700;
+    }
+
+    &__appel {
+      color: $bg_color;
+
+    }
+
+    &__numero {
+      color: $btn_color;
+      padding: 0em 1em;
+      background-color: $bg_color;
+      border-radius: 5px;
+    }
+
+    &__site {
+      font-weight: 500;
+      color: white;
+      border-bottom: 2px solid $bg_color;
+      font-size: 2.5em;
+    }
+  }
+
+  ////////////////footer__test/////////////////////
+  .footer {
+    &__test {
+      padding: 2em 0em;
+      text-align: center;
+      background-color: $bg_test;
+      line-height: 1;
+
+      &__title {
+        font-size: 2.7em;
+        font-weight: 700;
+        color: $btn_color;
+      }
+
+      &__img {
+        margin: 1.2em 0em;
+
+        img {
+          width: 6em;
+
+        }
+      }
+
+      &__btn {
+        background-color: $btn_color;
+        padding: .7em 18em;
+        text-align: center;
+        border-radius: 5px;
+        display: inline-block;
+
+        a {
+          font-size: 3em;
+          color: white;
+          font-weight: 700;
+
+        }
+      }
+    }
+  }
+
+  //// footer_contacte ////////////////////////////////////////////////
+  &__contacte {
+    margin: 2em 3em 4em 4em;
+
+    &__logo {
+      text-align: center;
+
+
+      img {
+        width: 7em;
+      }
+    }
+
+    &__parts {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+    }
+
+    &__part1 {
+      display: flex;
+      flex-direction: column;
+      width: 17%;
+
+      a {
+        font-size: 2em;
+        color: black;
+        line-height: 2.7;
+        text-align: center;
+
+        img {
+          width: 7em;
+        }
+      }
+    }
+
+    &__part2 {
+      text-align: center;
+      width: 38%;
+      line-height: 2.2;
+    }
+
+    &__utiles {
+      font-size: 2.4em;
+      font-weight: 700;
+      color: $btn_color;
+    }
+
+    &__aide {
+      font-size: 1.7em;
+    }
+
+    &__num {
+      color: $num_color;
+      font-size: 2.4em;
+    }
+
+    &__part3 {
+      width: 45%;
+      font-size: 1.6em;
+      font-weight: 500;
+      color: $color2;
+      display: flex;
+      align-items: center;
+      line-height: 2;
+
+    }
+
+    &__color {
+      height: 2em;
+      background-color: $btn_color;
+      margin: 0em -0.5em;
+    }
+  }
+}

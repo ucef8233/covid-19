@@ -1,0 +1,55 @@
+@import 'variable';
+
+.active {
+  background-color: $bg_color;
+}
+
+//// header/////
+.header {
+  &__logo {
+    img {
+      width: 5em;
+    }
+  }
+
+  nav {
+
+    padding: 0em 2em;
+    background: url("../../Design/Assets/png/Navigation Bar 5.jpg") no-repeat center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+
+  &__menu {
+    a {
+      margin-right: 3em;
+      color: black;
+      font-weight: 700;
+      font-size: 1.7em;
+
+    }
+  }
+
+  &__text {
+    background: url("../../Design/Assets/png/En\ chiffres-24.png") no-repeat center/cover;
+    text-align: center;
+    line-height: 2;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.3em;
+
+  }
+
+  &__parag {
+    width: 40em;
+    font-weight: 700;
+    margin: 0px auto;
+    font-size: 1.35em;
+    color: $btn_color;
+  }
+}

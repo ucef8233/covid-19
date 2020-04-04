@@ -1,0 +1,726 @@
+/// page acceuil ////////////////////////////////////////
+//   (max-width: 1745px) ////////////////////////////////////////////////////
+@media only screen and (max-width: 1745px) {
+
+  .main {
+    &__text {
+      font-size: 0.8rem !important;
+
+      a {
+        font-size: 1.6rem !important;
+      }
+
+      img {
+        width: 5em;
+        margin-left: 47%;
+      }
+    }
+
+    &__img {
+      height: 32em;
+    }
+  }
+}
+
+.footer {
+  &__recommmandation {
+
+    &__parag {
+      font-size: 1.8rem !important;
+    }
+
+    &__size {
+      font-size: 1.8rem !important;
+    }
+  }
+
+  &__test {
+    &__title {
+      font-size: 2.1em !important;
+    }
+
+    &__btn {
+      a {
+        font-size: 2.3em !important;
+      }
+    }
+  }
+
+  &__contacte {
+    &__part1 {
+      a {
+        font-size: 1.6em !important;
+      }
+    }
+
+    &__utiles {
+      font-size: 1.9em !important;
+    }
+
+    &__aide {
+      font-size: 1.4em !important;
+    }
+
+    &__num {
+      font-size: 1.9em;
+    }
+
+    &__part3 {
+      font-size: 1.5em !important;
+    }
+  }
+}
+
+//   (max-width: 1415px) ////////////////////////////////////////////////////
+@media only screen and (max-width: 1415px) {
+  .main {
+    &__btn {
+      padding: .7em 10em;
+    }
+
+    &__text {
+      font-size: 0.6rem !important;
+
+      a {
+        font-size: 1.5rem !important;
+      }
+
+      img {
+        width: 4em;
+        margin-left: 47%;
+      }
+    }
+
+    &__img {
+      height: 22em;
+    }
+  }
+
+  .symptomes {
+    font-size: 0.8em;
+  }
+
+  .footer {
+    &__contacte {
+
+      &__part1 {
+        a {
+          font-size: 1.2em !important;
+        }
+      }
+
+      &__utiles {
+        font-size: 1.5em !important;
+      }
+
+      &__aide {
+        font-size: 1em !important;
+      }
+
+      &__num {
+        font-size: 1.5em;
+      }
+
+      &__part3 {
+        font-size: 1em !important;
+      }
+    }
+
+    &__test {
+      &__title {
+        font-size: 1.8em !important;
+      }
+
+      &__btn {
+        padding: .7em 15em !important;
+
+        a {
+          font-size: 2.1em !important;
+        }
+      }
+
+      &__img {
+        margin: 1.2em 0em !important;
+
+        img {
+          width: 5em !important;
+
+        }
+      }
+    }
+  }
+
+}
+
+//   (max-width: 1080px) ////////////////////////////////////////////////////
+@media only screen and (max-width: 1080px) {
+  .main {
+    &__btn {
+      padding: .7em 7em;
+    }
+
+    &__text {
+
+      font-size: 0.4rem !important;
+
+      a {
+        font-size: 0.8rem !important;
+      }
+    }
+
+    &__img {
+      height: 17em;
+    }
+  }
+
+  .symptomes {
+    &__title {
+      font-size: 2em !important;
+    }
+
+    &__image {
+      width: 40% !important;
+
+      &--marge {
+        width: 35% !important;
+      }
+    }
+
+    &__categorie {
+      &__parag {
+        font-size: 2em !important;
+      }
+
+      &--1 {
+        margin-left: 3em !important;
+      }
+
+      &--2 {
+        margin-left: 2em !important;
+      }
+    }
+  }
+
+  .footer {
+    &__recommmandation {
+
+      padding: 1em 2em !important;
+
+      &__parag {
+        font-size: 1.2em !important;
+      }
+
+      &__size {
+        font-size: 1rem !important;
+      }
+    }
+
+    &__test {
+      &__title {
+        font-size: 1.1em !important;
+      }
+
+      &__btn {
+
+        padding: .7em 12em !important;
+
+        a {
+          font-size: 1.6em !important;
+        }
+      }
+
+    }
+
+    &__contacte {
+      &__logo {
+        img {
+          width: 5em !important;
+        }
+      }
+
+      &__parts {
+        flex-wrap: wrap;
+      }
+
+      &__part1 {
+        width: 40% !important;
+      }
+
+      &__part2 {
+        width: 60% !important;
+      }
+
+      &__part3 {
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+    }
+  }
+}
+
+//   (max-width: 790px) ////////////////////////////////////////////////////
+@media only screen and (max-width: 790px) {
+  * {
+    font-size: 0.9rem !important;
+  }
+
+  .header {
+    &__menu {
+      a {
+        img {
+          width: 4.5em;
+        }
+      }
+    }
+
+    &__logo {
+      img {
+        width: 4em;
+
+      }
+    }
+  }
+
+  .main {
+    padding: 2em;
+    margin-left: 1em;
+    flex-wrap: wrap;
+
+    &__img {
+      width: 100%;
+
+    }
+
+    &__parag {
+      font-size: 3em !important;
+      text-align: center;
+
+
+    }
+
+    &__text {
+      width: 100%;
+      font-size: 0.6rem !important;
+      text-align: center;
+
+
+      img {
+        margin-left: 0% !important;
+      }
+    }
+
+    &__btn {
+      padding: 1.3em 11em;
+      display: inline-block;
+
+      a {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  .symptomes {
+    &__title {
+      font-size: 1.7em !important;
+    }
+
+    &__image {
+      width: 30% !important;
+
+      &--marge {
+        width: 25% !important;
+      }
+    }
+
+    &__categorie {
+      img {
+        margin-bottom: 1em !important;
+      }
+
+      &__parag {
+        font-size: 1.4em !important;
+      }
+
+      &--1 {
+        margin-left: 3em !important;
+      }
+
+      &--2 {
+        margin-left: 2em !important;
+      }
+
+    }
+  }
+
+  .footer {
+    &__contacte {
+      margin: 1em !important;
+
+
+    }
+
+
+  }
+}
+
+
+//   (max-width: 570px) ////////////////////////////////////////////////////
+@media only screen and (max-width: 570px) {
+  * {
+    font-size: 0.87rem !important;
+  }
+
+  .main {
+    &__img {
+      height: 25em;
+    }
+
+    &__text {
+      font-size: .5rem !important;
+    }
+  }
+
+  .footer {
+    &__recommmandation {
+      text-align: center;
+      padding: 3em 1.2em 0em 1.2em !important;
+      margin: 0em auto !important;
+
+      &__parts {
+        flex-wrap: wrap;
+      }
+
+      &__part1 {
+        width: 100% !important;
+      }
+
+      &__part2 {
+        width: 100% !important;
+        margin: 1em !important;
+      }
+    }
+
+    &__test {
+      &__btn {
+        padding: .7em 12em;
+
+        a {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+//   (max-width: 375px) ////////////////////////////////////////////////////
+@media only screen and (max-width: 375px) {
+  * {
+    font-size: 0.8rem !important;
+  }
+
+  .header {
+    &__parag {
+      width: 35em;
+      color: black;
+      font-weight: 700;
+      padding-bottom: 0.5em;
+    }
+
+    &__text {
+      line-height: 1.9 !important;
+    }
+
+    &__logo {
+      img {
+        width: 4.5em;
+      }
+    }
+
+    &__menu {
+      a {
+        font-size: 1.3em !important;
+        margin-right: 1em;
+      }
+    }
+
+    &__title {
+      font-size: 1.4em !important;
+      padding-top: 0.2em;
+      color: $btn_color;
+    }
+  }
+
+  .main {
+    padding: 0em;
+
+    &__img {
+      height: 28em;
+      width: 96%;
+      padding-top: 2em;
+    }
+
+    &__parag {
+      font-size: 0.9em !important;
+      max-width: 22em;
+      margin: 0px auto;
+
+      &--color {
+        font-size: 1.2em !important;
+        margin-left: 1.6em;
+      }
+    }
+
+    &__text {
+      font-size: 1.2em !important;
+      line-height: 1.5;
+      padding-top: 1.3em;
+
+      img {
+        width: 4.5em;
+        margin-left: 0%;
+        margin: 1.8em 0em 1.2em 0em;
+      }
+    }
+  }
+
+  .footer {
+    &__recommmandation {
+      text-align: center;
+      padding: 3em 1.2em 0em 1.2em !important;
+      margin: 0em auto !important;
+
+      &__title {
+        font-size: 1.7em !important;
+      }
+
+      &__size {
+        font-size: 1.5em !important;
+      }
+
+      &__numero {
+        padding: 0em !important;
+        font-size: 2em !important;
+      }
+
+      &__parag {
+        font-size: 1.4em !important;
+        font-weight: 600;
+
+        &--color {
+          color: white !important;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    &__test {
+      padding: 1em 0em !important;
+
+      &__title {
+        font-size: 0.9em !important;
+      }
+
+      &__btn {
+
+        padding: .7em 6em !important;
+
+        a {
+          font-size: 1.2em !important;
+        }
+      }
+
+      &__img {
+        margin: 0.8em 0em 0.5em 0em !important;
+
+        img {
+          width: 2em !important;
+
+        }
+      }
+
+    }
+  }
+}
+
+//// page conseil ////////////////////////////////////////////////
+@media only screen and (max-width: 1745px) {
+  .main {
+    &__info {
+      padding: 2% !important;
+
+      &__title {
+        font-size: 2em !important;
+        margin-bottom: 5% !important;
+      }
+
+      &__parag {
+        font-size: 1.5em !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1415px) {
+
+  .main {
+    &__conseil {
+      &__img {
+        &--marg {
+          margin-top: 19% !important;
+        }
+      }
+
+      &__protection {
+        P {
+          font-size: 1.3em !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .main {
+    &__conseil {
+      &__title {
+        font-size: 2em !important;
+      }
+
+      &__img {
+        &--marg {
+          margin-top: 15% !important;
+        }
+      }
+
+      &__protection {
+        width: 50% !important;
+
+        &--marg {
+          width: 100% !important;
+        }
+
+        P {
+          font-size: 1.1em !important;
+          color: black;
+        }
+      }
+    }
+
+    &__info {
+      flex-wrap: wrap;
+
+      &__part1 {
+        margin: 0em auto;
+      }
+
+      &__links {
+        flex-direction: column;
+        width: 100% !important;
+
+        a {
+          margin: 1em;
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 790px) {
+
+  .main {
+    &__symptomes {
+      &__title {
+        font-size: 2em !important;
+        width: 70% !important;
+        margin: 2em auto !important;
+      }
+    }
+
+    &__conseil {
+      &__title {
+        margin: 14% 0% !important;
+      }
+
+      &__img {
+        &--marg {
+          margin-top: 15% !important;
+        }
+      }
+
+
+      &__protection {
+        img {
+          width: 7em !important;
+
+        }
+
+        P {
+          font-size: 0.9em !important;
+        }
+      }
+    }
+  }
+
+  #parag {
+    font-size: 1.2em !important;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .main {
+    &__conseil {
+      font-size: 0.8rem !important;
+    }
+
+
+
+    &__symptome {
+
+      margin-bottom: 1em !important;
+
+      img {
+        width: 5em !important;
+        margin-bottom: 1em !important;
+      }
+
+      &--marg {
+        margin-top: 1.7em;
+      }
+    }
+  }
+
+  #img {
+    width: 3em !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .main {
+    &__conseil {
+      &__protection {
+        &--marg {
+          margin-bottom: 5em !important;
+        }
+
+        margin-bottom: 2em !important;
+
+        P {
+          font-size: 1.1em !important;
+        }
+      }
+
+      &__img {
+        &--marg {
+          margin-top: 27% !important;
+        }
+      }
+    }
+
+
+  }
+}

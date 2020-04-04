@@ -1,0 +1,85 @@
+//////////// main ////////////////////////////
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 3em 2em 1em;
+  font-weight: 700;
+
+
+  &__img {
+    width: 48%;
+    height: 42em;
+  }
+
+  &__text {
+    padding-top: 2em;
+
+    img {
+      width: 7em;
+      margin-left: 47%;
+    }
+
+    a {
+      color: white;
+      font-size: 3em;
+    }
+
+  }
+
+  &__btn {
+    margin-top: 1em;
+    background-color: $btn_color;
+    padding: .7em 16em;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  &__parag {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 2.3em;
+    color: $color2;
+
+    &--color {
+      color: $btn_color;
+    }
+  }
+
+  //////////////symptomes////////////////
+  &__symptomes {
+    text-align: center;
+
+    &__title {
+      color: $btn_color;
+      font-size: 2.5em;
+      font-weight: 700;
+      margin: 3%;
+    }
+
+    &__surv {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 60%;
+      margin: 5% auto;
+    }
+  }
+
+  &__symptome {
+    width: 50%;
+
+    &--img {
+      width: 4em !important;
+    }
+
+    img {
+      width: 7em;
+      margin-bottom: 5%;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 2em;
+    }
+  }
+}
