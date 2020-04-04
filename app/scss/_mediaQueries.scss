@@ -633,7 +633,13 @@
 @media only screen and (max-width: 790px) {
 
   .main {
-
+    &__symptomes {
+      &__title {
+        font-size: 2em !important;
+        width: 70% !important;
+        margin: 2em auto !important;
+      }
+    }
 
     &__conseil {
       &__title {
@@ -666,6 +672,26 @@
     &__conseil {
       font-size: 0.8rem !important;
     }
+
+
+
+    &__symptome {
+
+      margin-bottom: 1em !important;
+
+      img {
+        width: 5em !important;
+        margin-bottom: 1em !important;
+      }
+
+      &--marg {
+        margin-top: 1.7em;
+      }
+    }
+  }
+
+  #img {
+    width: 3em !important;
   }
 }
 
