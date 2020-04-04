@@ -1,7 +1,17 @@
 @import 'variable';
 
+.active {
+  background-color: $bg_color;
+}
+
 //// header/////
 .header {
+  &__logo {
+    img {
+      width: 5em;
+    }
+  }
+
   nav {
 
     padding: 0em 2em;
@@ -9,6 +19,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
   }
 
   &__menu {

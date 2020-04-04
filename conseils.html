@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/conseil.css">
+  <link rel="stylesheet" href="src/css/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+  </header>
+  <main>
+
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <!-- footer recommandation -->
+    <div class="footer__recommmandation">
+    </div>
+    <!-- end footer recommandation -->
+    <!-- footer test -->
+    <div class="footer__test">
+      <div class="footer__test__title">Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?
+      </div>
+      <div class="footer__test__img">
+        <img src="Design/Assets/png/1f637.png" alt="émoticone malade" title="émoticone malade">
+      </div>
+      <div class="footer__test__btn">
+        <a href="#">Demarer le test
+        </a></div>
+    </div>
+    <!-- end footer test -->
+    <!-- footer contact -->
+    <div class="footer__contacte">
+    </div>
+    <!-- end footer contact -->
+    <div class="footer__contacte__color"></div>
+  </footer>
+</body>
+<!-- scripy jquery pour load html header et footer (recommmandation(footer_.html)/contacte(footer__.html) ) -->
+<script>
+  $(document).ready(function () {
+    $('.footer__recommmandation').load("hero/footer_.html");
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('.footer__contacte').load("hero/footer__.html");
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('header').load("hero/header.html");
+  });
+</script>
+<!-- end script -->
