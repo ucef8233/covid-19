@@ -8,6 +8,13 @@
     sans-serif;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
 $color2 :#7F7F7F;
 $btn_color :#1078ad;
 $bg_color : #F4CF1B;
