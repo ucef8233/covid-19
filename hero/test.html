@@ -12,37 +12,62 @@
 <body>
   <header class="header">
   </header>
-  <main class="main__info">
-    <div class="main__tags">
-      <div class="main__tag">
-        <img class="main__img  main__img--active" src="/Design/Assets/svg/active.svg" alt="">
-        <h3>Informations</h3>
+  <main>
+    <section class="main__info sect">
+      <div class="main__tags">
+        <div class="main__tag">
+          <img class="main__info__img  main__info__img--active" src="/Design/Assets/svg/active.svg" alt="">
+          <h3 class="h3__active">Informations</h3>
+        </div>
+        <div class="main__tag">
+          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <h3>Questionnaire</h3>
+        </div>
+        <div class="main__tag">
+          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <h3>Résultats</h3>
+        </div>
       </div>
-      <div class="main__tag">
-        <img class="main__img" src="/Design/Assets/svg/desactive.svg" alt="">
-        <h3>Questionnaire</h3>
+      <div class="main__Preambule">
+        <h3>Préambule</h3>
+        <p>« L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour
+          contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant l’épidémie de
+          Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et contenus mis à
+          disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont pas garantis.
+        </p>
+        <hr>
+        <p> L’utilisation de l’application et de son contenu ne remplace en aucun cas le conseil nécessaire donné par
+          votre médecin ou votre pharmacien ou tout autre professionnel de santé compétent dans chaque cas
+          particulier. Tout examen ou décision de l’utilisateur doit être réalisé ou prise de manière autonome sur la
+          base de l’information scientifique et clinique pertinente, de la notice officielle du produit concerné le
+          cas échéant et en cas de doute, en consultant un médecin compétent. </p>
       </div>
-      <div class="main__tag">
-        <img class="main__img" src="/Design/Assets/svg/desactive.svg" alt="">
-        <h3>Résultats</h3>
+      <a href="#" id="demarer">Demarer le test</a>
+    </section>
+    <section class="main__questionnaire sect affiche">
+      <div class="main__tags">
+        <div class="main__tag">
+          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <h3 class="h3__active">Informations</h3>
+        </div>
+        <div class="main__tag">
+          <img class="main__info__img  main__info__img--active" src="/Design/Assets/svg/active.svg" alt="">
+          <h3>Questionnaire</h3>
+        </div>
+        <div class="main__tag">
+          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <h3>Résultats</h3>
+        </div>
       </div>
-    </div>
-    <div class="main__Preambule">
-      <h3>Préambule</h3>
-      <p>« L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour
-        contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant l’épidémie de
-        Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et contenus mis à
-        disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont pas garantis.
-      </p>
-      <hr>
-      <p> L’utilisation de l’application et de son contenu ne remplace en aucun cas le conseil nécessaire donné par
-        votre médecin ou votre pharmacien ou tout autre professionnel de santé compétent dans chaque cas
-        particulier. Tout examen ou décision de l’utilisateur doit être réalisé ou prise de manière autonome sur la
-        base de l’information scientifique et clinique pertinente, de la notice officielle du produit concerné le
-        cas échéant et en cas de doute, en consultant un médecin compétent. </p>
-    </div>
-    <a href="#">Demarer le test</a>
+      <form id="form">
+        <div class="questions">
+        </div>
+      </form>
+      <input type="submit" value="suivant" id="suivant">
+      <input type="submit" value="precedent" id="precedent">
+    </section>
   </main>
+
 
   <div class="footer__recommmandation">
   </div>
@@ -68,7 +93,7 @@
     $('header').load("header.html");
   });
 </script>
-
+<script src="/src/js/general.js"></script>
 <!-- end script -->
 
 </html>
