@@ -35,23 +35,22 @@ precedent.addEventListener("click", function () {
     precedent.classList.add("affiche");
   }
   questions.innerHTML = Question[i].question + Question[i].rep;
+  recup();
 });
 ////// garder les resultat////
-
 var recup = function () {
   reponces = document.querySelectorAll("#form__choice");
   oplalla = document.getElementById("reponce1");
   if (reponces.length === 0) {
-    // suivant.addEventListener('click', function () {
-    //   info.splice(i, 1, oplalla.value);
-    // })
-    info.splice(i, 1, oplalla.value);
+    oplalla.addEventListener("change", function (e) {
+      info.splice(i, 1, e.target.value);
+    });
   } else if (reponces.length === 2) {
     for (let k = 0; k < reponces.length; k++) {
       reponces[k].addEventListener("click", function () {
-        if (k == 0) {
+        if (reponces[0].checked) {
           info.splice(i, 1, "Oui");
-        } else if (k == 1) {
+        } else if (reponces[1].checked) {
           info.splice(i, 1, "Non");
         }
       });
