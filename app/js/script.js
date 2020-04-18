@@ -4,7 +4,7 @@ const suivant = document.getElementById("suivant");
 const precedent = document.getElementById("precedent");
 const demarage = document.getElementById("demarer");
 const sect = document.querySelectorAll(".sect");
-
+let i = 0;
 var oplalla;
 //////////////////// passer de l'information au question //////////////////
 var passage = function () {
@@ -22,7 +22,7 @@ var passage = function () {
 };
 
 //////// passage de question //////
-let i = 0;
+
 var Qsuivante = function () {
   suivant.addEventListener("click", function () {
     reponces = document.querySelectorAll("#form__choice");
@@ -84,7 +84,7 @@ var choisReponce = function () {
       break;
   }
 };
-var garderReponce = function () {};
+
 var blan = function (e) {
   reponces = document.querySelectorAll("#form__choice");
   info.splice(i, 1, tabRe[e][0]);
