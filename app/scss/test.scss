@@ -5,6 +5,10 @@
 @import "footer";
 @import "variable";
 
+body {
+    overflow-x: hidden;
+}
+
 .header__text {
     display: none;
 }
@@ -96,4 +100,53 @@
 /////////////////js////////////////
 .affiche {
     display: none;
+}
+
+form {
+    border: 3px solid $bg_test;
+    border-radius: 1em;
+    padding: 2em 4em;
+    max-width: 65%;
+    margin: 0em auto;
+}
+
+.barNumber {
+    border: 3px solid $bg_test;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.questions {
+    p {
+        font-weight: 700;
+        font-size: 2em;
+        color: $color2;
+    }
+}
+
+
+
+
+.reponces {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+
+    #precedent,
+    #suivant {
+        border: 1px dotted $text_color;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 1.5em;
+        font-weight: 600;
+        background-color: $btn_color;
+    }
+
 }

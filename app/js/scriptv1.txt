@@ -1,0 +1,261 @@
+const questions = document.querySelector(".questions");
+const repon = document.querySelector(".reponces");
+const suivant = document.getElementById("suivant");
+const precedent = document.getElementById("precedent");
+const demarage = document.getElementById("demarer");
+const sect = document.querySelectorAll(".sect");
+let i = 0;
+var oplalla;
+//////////////////// passer de l'information au question //////////////////
+window.onload = () => {
+  for (let i = 0; i < sect.length; i++) {
+    demarage.addEventListener("click", function () {
+      sect[i].classList.toggle("affiche");
+      questions.innerHTML = Question[0];
+      repon.innerHTML = rep[1];
+      precedent.classList.add("affiche");
+      choisReponce(1);
+    });
+  }
+  Qsuivante();
+  Qprecedente();
+};
+
+//////// passage de question //////
+
+Qsuivante = () => {
+  suivant.addEventListener("click", function (e) {
+    reponces = document.querySelectorAll("#form__choice");
+    precedent.classList.remove("affiche");
+    if (i >= 0 && i < Question.length - 1) {
+      i++;
+    }
+    questions.innerHTML = Question[i];
+    choix = document.querySelector(".questions p").className;
+    e.preventDefault();
+    choisPositionReponce();
+  });
+};
+
+Qprecedente = () => {
+  precedent.addEventListener("click", function (e) {
+    if (i > 0) {
+      i--;
+    }
+    if (i == 0) {
+      precedent.classList.add("affiche");
+    }
+    questions.innerHTML = Question[i];
+    choix = document.querySelector(".questions p").className;
+    e.preventDefault();
+    choisPositionReponce();
+  });
+};
+
+//// garder les resultat////
+
+////// metre les resultats dans un tableau qui contien '4 tableau a fin de recuperer la position cheked (i) et la position du tableau reponces.lenght
+choisPositionReponce = () => {
+  switch (choix) {
+    case "form__question--c":
+      repon.innerHTML = rep[0].c;
+      case0();
+      break;
+    case "form__question--age":
+      repon.innerHTML = rep[0].age;
+      case0();
+      break;
+    case "form__question--poids":
+      repon.innerHTML = rep[0].poids;
+      case0();
+      break;
+    case "form__question--taille":
+      repon.innerHTML = rep[0].taille;
+      case0();
+      break;
+    case "form__question":
+      repon.innerHTML = rep[1];
+      choisReponce(1);
+      break;
+    case "form__question--trois":
+      repon.innerHTML = rep[2];
+      choisReponce(2);
+      break;
+    case "form__question--quatre":
+      repon.innerHTML = rep[3];
+      choisReponce(3);
+      break;
+  }
+};
+
+choisReponce = (e) => {
+  reponces = document.querySelectorAll("#form__choice");
+  info.splice(i, 1, tabRe[e][0]);
+  for (let k = 0; k < reponces.length; k++) {
+    reponces[k].addEventListener("click", function () {
+      if (reponces[k].checked) {
+        info.splice(i, 1, tabRe[e][k]);
+      }
+    });
+  }
+};
+case0 = () => {
+  reponces = document.querySelectorAll("#form__choice");
+  oplalla = document.getElementById("reponce1");
+  if (oplalla.value == "") {
+    info.splice(i, 1, tabRe[0]);
+  }
+  oplalla.addEventListener("change", function (e) {
+    info.splice(i, 1, e.target.value);
+  });
+};
+
+////////////////////// type 2 suivant precendent 
+const questions = document.querySelector(".questions");
+const repon = document.querySelector(".reponces");
+const suivant = document.getElementById("suivant");
+const precedent = document.getElementById("precedent");
+const demarage = document.getElementById("demarer");
+const sect = document.querySelectorAll(".sect");
+let i = 0;
+var oplalla;
+//////////////////// passer de l'information au question //////////////////
+window.onload = () => {
+  for (let i = 0; i < sect.length; i++) {
+    demarage.addEventListener("click", function () {
+      sect[i].classList.toggle("affiche");
+      precedent.classList.add("affiche");
+      questions.innerHTML = Question[0];
+      choix = document.querySelector(".questions p").className;
+      choisReponce();
+      spliceReponce(1);
+    });
+  }
+  Qsuivante();
+  Qprecedente();
+};
+
+//////// passage de question //////
+
+Qsuivante = () => {
+  suivant.addEventListener("click", function (e) {
+    reponces = document.querySelectorAll("#form__choice");
+    precedent.classList.remove("affiche");
+    if (i >= 0 && i < Question.length - 1) {
+      i++;
+    }
+    questions.innerHTML = Question[i];
+    choix = document.querySelector(".questions p").className;
+    e.preventDefault();
+    choisReponce();
+    spliceCas();
+  });
+};
+
+Qprecedente = () => {
+  precedent.addEventListener("click", function (e) {
+    if (i > 0) {
+      i--;
+    }
+    if (i == 0) {
+      precedent.classList.add("affiche");
+    }
+    questions.innerHTML = Question[i];
+    choix = document.querySelector(".questions p").className;
+    e.preventDefault();
+    choisReponce();
+    spliceCas();
+  });
+};
+
+//// garder les resultat////
+
+////// metre les resultats dans un tableau qui contien '4 tableau a fin de recuperer la position cheked (i) et la position du tableau reponces.lenght
+choisReponce = () => {
+  switch (choix) {
+    case "form__question--c":
+      repon.innerHTML = rep[0].c;
+      break;
+    case "form__question--age":
+      repon.innerHTML = rep[0].age;
+      break;
+    case "form__question--poids":
+      repon.innerHTML = rep[0].poids;
+      break;
+    case "form__question--taille":
+      repon.innerHTML = rep[0].taille;
+      break;
+    case "form__question":
+      repon.innerHTML = rep[1];
+      break;
+    case "form__question--trois":
+      repon.innerHTML = rep[2];
+      break;
+    case "form__question--quatre":
+      repon.innerHTML = rep[3];
+      break;
+  }
+};
+spliceCas = () => {
+  switch (choix) {
+    case "form__question--c":
+    case "form__question--age":
+    case "form__question--poids":
+    case "form__question--taille":
+      case0();
+      break;
+    case "form__question":
+      spliceReponce(1);
+      break;
+    case "form__question--trois":
+      spliceReponce(2);
+      break;
+    case "form__question--quatre":
+      spliceReponce(3);
+      break;
+  }
+};
+
+spliceReponce = (e) => {
+  reponces = document.querySelectorAll("#form__choice");
+  info.splice(i, 1, tabRe[e][0]);
+  for (let k = 0; k < reponces.length; k++) {
+    reponces[k].addEventListener("click", function () {
+      if (reponces[k].checked) {
+        info.splice(i, 1, tabRe[e][k]);
+      }
+    });
+  }
+};
+// spliceCasPrecedent = () => {
+//   switch (choix) {
+//     case "form__question--c":
+//     case "form__question--age":
+//     case "form__question--poids":
+//     case "form__question--taille":
+//       case0();
+//       break;
+//     case "form__question":
+//       spliceReponcePrecedent(1);
+//       break;
+//     case "form__question--trois":
+//       spliceReponcePrecedent(2);
+//       break;
+//     case "form__question--quatre":
+//       spliceReponcePrecedent(3);
+//       break;
+//   }
+// };
+// spliceReponcePrecedent = () => {
+//   info.splice(i, 1, info[i]);
+// };
+case0 = () => {
+  reponces = document.querySelectorAll("#form__choice");
+  oplalla = document.getElementById("reponce1");
+  if (oplalla.value == "") {
+    info.splice(i, 1, tabRe[0]);
+  }
+  oplalla.addEventListener("change", function (e) {
+    info.splice(i, 1, e.target.value);
+  });
+};
