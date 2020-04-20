@@ -12,7 +12,7 @@ const cssnano = require("cssnano");
 // File paths
 const files = {
   scssPath: "app/scss/**/*.scss",
-  jsPath: "app/js/**/*.js"
+  jsPath: "app/js/**/*.js",
 };
 // Sass task: compiles the style.scss file into style.css
 function scssTask() {
@@ -27,12 +27,14 @@ function scssTask() {
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask() {
   return src([
-    files.jsPath
+    files.jsPath,
     //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
   ])
     .pipe(concat("general.js"))
     .pipe(dest("src/js/"));
 }
+
+/// img
 
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously

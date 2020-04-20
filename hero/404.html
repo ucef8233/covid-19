@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/css/404.css">
+  <link rel="stylesheet" href="/src/css/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+  </header>
+  <main class="main__404">
+    <img src="/Design/Assets/png/404.png" alt="image erreur 404" title="erreur 404">
+    <h2 class="main__404__title">tu es perdu</h2>
+    <a href="index.html">retourner à l'accueil</a>
+  </main>
+  <footer class="footer">
+    <!-- footer contact -->
+    <div class="footer__contacte">
+    </div>
+    <!-- end footer contact -->
+    <div class="footer__contacte__color"></div>
+  </footer>
+  <script src="src/js/general.js"></script>
+</body>
+<script>
+  $(document).ready(function () {
+    $('.footer__contacte').load("footer__.html");
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('header').load("header.html");
+  });
+</script>
+
+<!-- end script -->
+
+</html>
