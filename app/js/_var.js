@@ -26,13 +26,11 @@ const rep = [
   ///// 1 reponce /////
   {
     c:
-      '<input type="number" id="reponce1" placeholder="34 - 42" min="34" max="42" size ="10"> <label>°c</label><br><br>',
-    age:
-      '<input type="number" id="reponce1" name="question11" placeholder="15 - 110" min="15" max="110" size ="10"><label>age</label><br><br></br>',
-    poids:
-      ' <input type="number" id="reponce1" name="question12" placeholder="20 - 250" min="20" max="250" size ="10"><label>kg</label><br><br></br>',
+      '<input type="number" id="reponce1" min= "34"> <label>°c</label><br><br>',
+    age: '<input type="number" id="reponce1"><label>age</label><br><br></br>',
+    poids: ' <input type="number" id="reponce1"><label>kg</label><br><br></br>',
     taille:
-      '<input type="number" id="reponce1" placeholder="80 - 250" min="80" max="250"> <label>cm</label size ="10"><br><br></br>',
+      '<input type="number" id="reponce1"><label>cm</label size ="10"><br><br></br>',
   },
   /////////// oui non ///////////
   ' <input type="radio" id="form__choice" name="question"><label for="oui">Oui</label> <br> <input type="radio" id="form__choice" name="question"><label for="non">Non</label><br><br></br>',

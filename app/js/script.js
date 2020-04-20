@@ -6,7 +6,7 @@ const demarage = document.getElementById("demarer");
 const sect = document.querySelectorAll(".sect");
 let i = 0;
 var oplalla;
-var blan = [];
+var blan = [34, 18, 50, 140];
 
 //////////////////// passer de l'information au question //////////////////
 window.onload = () => {
@@ -23,9 +23,6 @@ window.onload = () => {
   Qsuivante();
   Qprecedente();
 };
-
-//////// passage de question //////
-
 Qsuivante = () => {
   suivant.addEventListener("click", function (e) {
     reponces = document.querySelectorAll("#form__choice");
@@ -39,18 +36,8 @@ Qsuivante = () => {
     choisReponce();
     tcheecked();
     tcheeckedtext();
-    // inputText();
-    // if (reponces.length == 0) {
-    //   blan.splice(i, 1, info[i]);
-    // }
   });
 };
-// recupinput = () => {
-//   for (let i = 0; i < 2; i++) {
-//     if (reponces.length == 0) {
-//     }
-//   }
-// };
 
 Qprecedente = () => {
   precedent.addEventListener("click", function (e) {
@@ -64,15 +51,10 @@ Qprecedente = () => {
     choix = document.querySelector(".questions p").className;
     e.preventDefault();
     choisReponce();
-    oplalla = document.getElementById(".reponce1");
     tcheecked();
     tcheeckedtext();
   });
 };
-
-//// garder les resultat////
-
-////// metre les resultats dans un tableau qui contien '4 tableau a fin de recuperer la position cheked (i) et la position du tableau reponces.lenght
 choisReponce = () => {
   switch (choix) {
     case "form__question--c":
@@ -131,7 +113,7 @@ spliceReponce = (e) => {
   } else {
     info.splice(i, 1, info[i]);
   }
-  // if (info[i] !== undefined)
+
   for (let k = 0; k < reponces.length; k++) {
     reponces[k].addEventListener("click", function () {
       if (reponces[k].checked) {
@@ -151,18 +133,6 @@ tcheecked = () => {
     reponces[3].setAttribute("checked", "checked");
   }
 };
-// var r = 0;
-// hahowa = [];
-// inputText = () => {
-//   oplalla = document.querySelector(".reponce1");
-//   if (reponces.length == 0) {
-//     oplalla.addEventListener("change", function (e) {
-//       blan.splice(r, 1, e.target.value);
-//       r++;
-//     });
-//   }
-//   hahowa.push(blan[blan.length - 1]);
-// };
 case0 = () => {
   reponces = document.querySelectorAll("#form__choice");
   oplalla = document.getElementById("reponce1");
@@ -183,23 +153,22 @@ case0 = () => {
         blan.splice(3, 1, e.target.value);
         break;
     }
-    if (oplalla.value == "") {
-      switch (choix) {
-        case "form__question--c":
-          info.splice(i, 1, e.target.value);
-
-        case "form__question--age":
-          info.splice(i, 1, e.target.value);
-
-        case "form__question--poids":
-          info.splice(i, 1, e.target.value);
-
-        case "form__question--taille":
-          info.splice(i, 1, e.target.value);
-      }
-    }
   });
+  if (oplalla.value == "") {
+    switch (choix) {
+      case "form__question--c":
+        info.splice(i, 1, blan[0]);
+        break;
+      case "form__question--age":
+        info.splice(i, 1, blan[1]);
+        break;
+      case "form__question--poids":
+        info.splice(i, 1, blan[2]);
+        break;
+      case "form__question--taille":
+        info.splice(i, 1, blan[3]);
+        break;
+    }
+  }
   // }
 };
-
-////////////////broblaime de champ input doit pas etre vid soit valeur par defaut soit abliger utilisateur a entrer un nombre //////
