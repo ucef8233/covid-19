@@ -1,7 +1,7 @@
 @import 'variable';
 
-.active {
-  background-color: $bg_color;
+#active {
+  color: $bg_color;
 }
 
 //// header/////
@@ -13,14 +13,14 @@
   }
 
   nav {
-
     padding: 0em 2em;
     background: url("../../Design/Assets/png/Navigation Bar 5.jpg") no-repeat center/cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
   }
 
   &__menu {
@@ -34,6 +34,7 @@
   }
 
   &__text {
+  
     background: url("../../Design/Assets/png/En\ chiffres-24.png") no-repeat center/cover;
     text-align: center;
     line-height: 2;

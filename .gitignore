@@ -1,1 +1,7 @@
+/app/
+/.vscode/
+/node_modules/
+*.json
+gulpfile.js
+
 

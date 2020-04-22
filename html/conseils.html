@@ -4,14 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/css/conseil.css">
+  <link rel="stylesheet" href="/src/css/style.css">
   <link rel="stylesheet" href="/src/css/normalize.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Document</title>
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="header">
+    <nav>
+      <div class="header__logo"> <img src="../Design/Assets/png/logo__sante-17@2x.png" alt=" Ministère de la Santé"
+          title="Ministère de la Santé"></div>
+      <div class="header__menu">
+        <a href="conseils.html" class="tahada" id="active">Conseil</a>
+        <a href="index.html" class="tahada">Accueil</a>
+        <a href="#"><img src="../Design/Assets/png/language_switch.png" alt="image changement de langage"> </a>
+      </div>
+    </nav>
+    <div class="header__text">
+      <h3 class="header__title">LA DERNIÈRE INFO MÉDICALE </h3>
+      <p class="header__parag">La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur
+        d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol. <br> N'arrêtez pas votre traitement
+        !
+        Consultez
+        votre médecin ou votre pharmacien. </p>
+    </div>
+    <nav>
   </header>
   <!--  end HEADER -->
   <!-- main -->
@@ -60,7 +79,7 @@
         </div>
         <div class="main__conseil__protection main__conseil__protection--marg">
           <img src="/Design/Assets/png/Restez.png" alt="image Restez chez vous, évitez tout contact avec les autres."
-           title=" Restez chez vous, évitez tout contact avec les autres.">
+            title=" Restez chez vous, évitez tout contact avec les autres.">
           <p>Restez chez vous, évitez tout contact avec les autres.<br> Certaines personnes transmettent le virus sans
             en
             ressentir <br>les symptômes.
@@ -85,7 +104,7 @@
       <div class="main__symptomes__surv">
         <div class="main__symptome">
           <img class="main__symptome--img" id="img" src="/Design/Assets/png/Fièvre.png" alt="image Fièvre"
-           title=" Fièvre">
+            title=" Fièvre">
           <p>Fièvre</p>
         </div>
         <div class="main__symptome">
@@ -159,11 +178,11 @@
     $('.footer__contacte').load("footer__.html");
   });
 </script>
-<script>
+<!-- <script>
   $(document).ready(function () {
     $('header').load("header.html");
   });
-</script>
+</script> -->
 <!-- end script -->
 
 </html>

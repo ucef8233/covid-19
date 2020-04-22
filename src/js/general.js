@@ -3,12 +3,14 @@ const repon = document.querySelector(".reponces");
 const suivant = document.getElementById("suivant");
 const precedent = document.getElementById("precedent");
 const demarage = document.getElementById("demarer");
+const resultat = document.getElementById("resultat");
 const sect = document.querySelectorAll(".sect");
+const afficheNum = document.getElementById("afficheNum");
+const progress = document.getElementById("file");
 let i = 0;
 var oplalla;
-var blan = [];
-
-//////////////////// passer de l'information au question //////////////////
+var blan = ["37", "18", "60", "170"];
+var val = 1;
 window.onload = () => {
   for (let i = 0; i < sect.length; i++) {
     demarage.addEventListener("click", function () {
@@ -16,6 +18,8 @@ window.onload = () => {
       precedent.classList.add("affiche");
       questions.innerHTML = Question[0];
       choix = document.querySelector(".questions p").className;
+      afficheNum.textContent = "1/" + Question.length;
+      progress.setAttribute("value", val);
       choisReponce();
       tcheecked();
     });
@@ -24,55 +28,52 @@ window.onload = () => {
   Qprecedente();
 };
 
-//////// passage de question //////
-
 Qsuivante = () => {
   suivant.addEventListener("click", function (e) {
     reponces = document.querySelectorAll("#form__choice");
     precedent.classList.remove("affiche");
     if (i >= 0 && i < Question.length - 1) {
       i++;
+      val++;
     }
+    if (i == Question.length - 1) {
+      suivant.classList.add("affiche");
+      resultat.classList.remove("affiche");
+    }
+    k = i + 1;
+    afficheNum.textContent = k + "/" + Question.length;
+    progress.setAttribute("value", val);
     questions.innerHTML = Question[i];
     choix = document.querySelector(".questions p").className;
     e.preventDefault();
     choisReponce();
     tcheecked();
     tcheeckedtext();
-    // inputText();
-    // if (reponces.length == 0) {
-    //   blan.splice(i, 1, info[i]);
-    // }
   });
 };
-// recupinput = () => {
-//   for (let i = 0; i < 2; i++) {
-//     if (reponces.length == 0) {
-//     }
-//   }
-// };
 
 Qprecedente = () => {
   precedent.addEventListener("click", function (e) {
+    suivant.classList.remove("affiche");
+    resultat.classList.add("affiche");
     if (i > 0) {
       i--;
+      val--;
     }
     if (i == 0) {
       precedent.classList.add("affiche");
     }
+    k = i + 1;
+    afficheNum.textContent = k + "/" + Question.length;
+    progress.setAttribute("value", val);
     questions.innerHTML = Question[i];
     choix = document.querySelector(".questions p").className;
     e.preventDefault();
     choisReponce();
-    oplalla = document.getElementById(".reponce1");
     tcheecked();
     tcheeckedtext();
   });
 };
-
-//// garder les resultat////
-
-////// metre les resultats dans un tableau qui contien '4 tableau a fin de recuperer la position cheked (i) et la position du tableau reponces.lenght
 choisReponce = () => {
   switch (choix) {
     case "form__question--c":
@@ -105,25 +106,7 @@ choisReponce = () => {
       break;
   }
 };
-tcheeckedtext = () => {
-  oplalla = document.getElementById("reponce1");
-  if (reponces.length == 0) {
-    switch (choix) {
-      case "form__question--c":
-        oplalla.value = blan[0];
-        break;
-      case "form__question--age":
-        oplalla.value = blan[1];
-        break;
-      case "form__question--poids":
-        oplalla.value = blan[2];
-        break;
-      case "form__question--taille":
-        oplalla.value = blan[3];
-        break;
-    }
-  }
-};
+
 spliceReponce = (e) => {
   reponces = document.querySelectorAll("#form__choice");
   if (info[i] == undefined) {
@@ -131,7 +114,7 @@ spliceReponce = (e) => {
   } else {
     info.splice(i, 1, info[i]);
   }
-  // if (info[i] !== undefined)
+
   for (let k = 0; k < reponces.length; k++) {
     reponces[k].addEventListener("click", function () {
       if (reponces[k].checked) {
@@ -151,18 +134,6 @@ tcheecked = () => {
     reponces[3].setAttribute("checked", "checked");
   }
 };
-// var r = 0;
-// hahowa = [];
-// inputText = () => {
-//   oplalla = document.querySelector(".reponce1");
-//   if (reponces.length == 0) {
-//     oplalla.addEventListener("change", function (e) {
-//       blan.splice(r, 1, e.target.value);
-//       r++;
-//     });
-//   }
-//   hahowa.push(blan[blan.length - 1]);
-// };
 case0 = () => {
   reponces = document.querySelectorAll("#form__choice");
   oplalla = document.getElementById("reponce1");
@@ -183,26 +154,47 @@ case0 = () => {
         blan.splice(3, 1, e.target.value);
         break;
     }
-    if (oplalla.value == "") {
-      switch (choix) {
-        case "form__question--c":
-          info.splice(i, 1, e.target.value);
-
-        case "form__question--age":
-          info.splice(i, 1, e.target.value);
-
-        case "form__question--poids":
-          info.splice(i, 1, e.target.value);
-
-        case "form__question--taille":
-          info.splice(i, 1, e.target.value);
-      }
-    }
   });
+  if (oplalla.value == "") {
+    switch (choix) {
+      case "form__question--c":
+        info.splice(i, 1, blan[0]);
+        break;
+      case "form__question--age":
+        info.splice(i, 1, blan[1]);
+        break;
+      case "form__question--poids":
+        info.splice(i, 1, blan[2]);
+        break;
+      case "form__question--taille":
+        info.splice(i, 1, blan[3]);
+        break;
+    }
+  }
   // }
 };
+tcheeckedtext = () => {
+  oplalla = document.getElementById("reponce1");
+  if (reponces.length == 0) {
+    switch (choix) {
+      case "form__question--c":
+        oplalla.value = blan[0];
+        break;
+      case "form__question--age":
+        oplalla.value = blan[1];
+        break;
+      case "form__question--poids":
+        oplalla.value = blan[2];
+        break;
+      case "form__question--taille":
+        oplalla.value = blan[3];
+        break;
+    }
+  }
+};
 
-////////////////broblaime de champ input doit pas etre vid soit valeur par defaut soit abliger utilisateur a entrer un nombre //////
+///////////////////////: navbar/////////////////:
+
 
 const Question = [
   '<p class="form__question"> Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ? </p>',
@@ -232,20 +224,20 @@ const rep = [
   ///// 1 reponce /////
   {
     c:
-      '<input type="number" id="reponce1" placeholder="34 - 42" min="34" max="42" size ="10"> <label>°c</label><br><br>',
+      '<div class="inputText"><input type="number" id="reponce1" min= "34"> <label>°c</label></div><br><br>',
     age:
-      '<input type="number" id="reponce1" name="question11" placeholder="15 - 110" min="15" max="110" size ="10"><label>age</label><br><br></br>',
+      '<div  class="inputText"> <input type="number" id="reponce1"><label>age</label></div><br><br></br>',
     poids:
-      ' <input type="number" id="reponce1" name="question12" placeholder="20 - 250" min="20" max="250" size ="10"><label>kg</label><br><br></br>',
+      ' <div  class="inputText"><input type="number" id="reponce1"><label>kg</label></div><br><br></br>',
     taille:
-      '<input type="number" id="reponce1" placeholder="80 - 250" min="80" max="250"> <label>cm</label size ="10"><br><br></br>',
+      '<div  class="inputText"><input type="number" id="reponce1"><label>cm</label size ="10"></div><br><br></br>',
   },
   /////////// oui non ///////////
-  ' <input type="radio" id="form__choice" name="question"><label for="oui">Oui</label> <br> <input type="radio" id="form__choice" name="question"><label for="non">Non</label><br><br></br>',
+  '<div> <input type="radio" id="form__choice" name="question"><label for="oui">Oui</label><br></div> <div> <input type="radio" id="form__choice" name="question"><label for="non">Non</label><br><br></br></div>',
   /////// 3reponces ////////////
-  ' <input type="radio" id="form__choice" name="question" checked> <label for="oui">Oui</label> <input type="radio" id="form__choice" name="question"> <label for="non">Non</label><input type="radio" id="form__choice" name="question"  ><label for="homme">Homme</label><br><br></br>',
+  ' <div><input type="radio" id="form__choice" name="question" checked> <label for="oui">Oui</label> </div><div> <input type="radio" id="form__choice" name="question"> <label for="non">Non</label> </div><div><input type="radio" id="form__choice" name="question"  ><label for="homme">Homme</label><br><br></br> </div>',
   /////// 4reponces////////////
-  '<input type="radio" id="form__choice" name="question" checked  ><label for="bien">Bien</label><input type="radio" id="form__choice" name="question" > <label for="abien">Assez bien</label>  <input type="radio" id="form__choice" name="question" > <label for="fatigue">Fatigué(e)</label> <input type="radio" id="form__choice" name="question" > <label for="tfatigue">Très fatigué(e)</label><br><br></br>',
+  '<div><input type="radio" id="form__choice" name="question" checked  ><label for="bien">Bien</label></div><div><input type="radio" id="form__choice" name="question" > <label for="abien">Assez bien</label></div><div>  <input type="radio" id="form__choice" name="question" > <label for="fatigue">Fatigué(e)</label></div><div> <input type="radio" id="form__choice" name="question" > <label for="tfatigue">Très fatigué(e)</label><br><br></br></div>',
 ];
 var tabRe = [
   "undefined",
@@ -254,4 +246,4 @@ var tabRe = [
   ["Bien", "Assez bien", "Fatigué", "Très fatigué"],
 ];
 var info = [];
-const resultat = [];
+// const resultat = [];
