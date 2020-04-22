@@ -3,12 +3,14 @@ const repon = document.querySelector(".reponces");
 const suivant = document.getElementById("suivant");
 const precedent = document.getElementById("precedent");
 const demarage = document.getElementById("demarer");
+const resultat = document.getElementById("resultat");
 const sect = document.querySelectorAll(".sect");
+const afficheNum = document.getElementById("afficheNum");
+const progress = document.getElementById("file");
 let i = 0;
 var oplalla;
-var blan = [34, 18, 50, 140];
-
-//////////////////// passer de l'information au question //////////////////
+var blan = ["37", "18", "60", "170"];
+var val = 1;
 window.onload = () => {
   for (let i = 0; i < sect.length; i++) {
     demarage.addEventListener("click", function () {
@@ -16,6 +18,8 @@ window.onload = () => {
       precedent.classList.add("affiche");
       questions.innerHTML = Question[0];
       choix = document.querySelector(".questions p").className;
+      afficheNum.textContent = "1/" + Question.length;
+      progress.setAttribute("value", val);
       choisReponce();
       tcheecked();
     });
@@ -23,13 +27,22 @@ window.onload = () => {
   Qsuivante();
   Qprecedente();
 };
+
 Qsuivante = () => {
   suivant.addEventListener("click", function (e) {
     reponces = document.querySelectorAll("#form__choice");
     precedent.classList.remove("affiche");
     if (i >= 0 && i < Question.length - 1) {
       i++;
+      val++;
     }
+    if (i == Question.length - 1) {
+      suivant.classList.add("affiche");
+      resultat.classList.remove("affiche");
+    }
+    k = i + 1;
+    afficheNum.textContent = k + "/" + Question.length;
+    progress.setAttribute("value", val);
     questions.innerHTML = Question[i];
     choix = document.querySelector(".questions p").className;
     e.preventDefault();
@@ -41,12 +54,18 @@ Qsuivante = () => {
 
 Qprecedente = () => {
   precedent.addEventListener("click", function (e) {
+    suivant.classList.remove("affiche");
+    resultat.classList.add("affiche");
     if (i > 0) {
       i--;
+      val--;
     }
     if (i == 0) {
       precedent.classList.add("affiche");
     }
+    k = i + 1;
+    afficheNum.textContent = k + "/" + Question.length;
+    progress.setAttribute("value", val);
     questions.innerHTML = Question[i];
     choix = document.querySelector(".questions p").className;
     e.preventDefault();
@@ -87,25 +106,7 @@ choisReponce = () => {
       break;
   }
 };
-tcheeckedtext = () => {
-  oplalla = document.getElementById("reponce1");
-  if (reponces.length == 0) {
-    switch (choix) {
-      case "form__question--c":
-        oplalla.value = blan[0];
-        break;
-      case "form__question--age":
-        oplalla.value = blan[1];
-        break;
-      case "form__question--poids":
-        oplalla.value = blan[2];
-        break;
-      case "form__question--taille":
-        oplalla.value = blan[3];
-        break;
-    }
-  }
-};
+
 spliceReponce = (e) => {
   reponces = document.querySelectorAll("#form__choice");
   if (info[i] == undefined) {
@@ -172,3 +173,24 @@ case0 = () => {
   }
   // }
 };
+tcheeckedtext = () => {
+  oplalla = document.getElementById("reponce1");
+  if (reponces.length == 0) {
+    switch (choix) {
+      case "form__question--c":
+        oplalla.value = blan[0];
+        break;
+      case "form__question--age":
+        oplalla.value = blan[1];
+        break;
+      case "form__question--poids":
+        oplalla.value = blan[2];
+        break;
+      case "form__question--taille":
+        oplalla.value = blan[3];
+        break;
+    }
+  }
+};
+
+///////////////////////: navbar/////////////////:

@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="/src/css/test.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <!-- <link rel="stylesheet" href="/src/css/normalize.css"> -->
   <title>Document</title>
 </head>
 
@@ -13,18 +14,18 @@
   <header class="header">
   </header>
   <main>
-    <section class="main__info sect">
+    <section class="main__inform sect">
       <div class="main__tags">
         <div class="main__tag">
-          <img class="main__info__img  main__info__img--active" src="/Design/Assets/svg/active.svg" alt="">
+          <img class="main__inform__img  main__inform__img--active" src="/Design/Assets/svg/active.svg" alt="">
           <h3 class="h3__active">Informations</h3>
         </div>
         <div class="main__tag">
-          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <img class="main__inform__img" src="/Design/Assets/svg/desactive.svg" alt="">
           <h3>Questionnaire</h3>
         </div>
         <div class="main__tag">
-          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <img class="main__inform__img" src="/Design/Assets/svg/desactive.svg" alt="">
           <h3>Résultats</h3>
         </div>
       </div>
@@ -47,21 +48,27 @@
     <section class="main__questionnaire sect affiche">
       <div class="main__tags">
         <div class="main__tag">
-          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <img class="main__inform__img" src="/Design/Assets/svg/desactive.svg" alt="">
           <h3 class="h3__active">Informations</h3>
         </div>
         <div class="main__tag">
-          <img class="main__info__img  main__info__img--active" src="/Design/Assets/svg/active.svg" alt="">
+          <img class="main__inform__img  main__inform__img--active" src="/Design/Assets/svg/active.svg" alt="">
           <h3>Questionnaire</h3>
         </div>
         <div class="main__tag">
-          <img class="main__info__img" src="/Design/Assets/svg/desactive.svg" alt="">
+          <img class="main__inform__img" src="/Design/Assets/svg/desactive.svg" alt="">
           <h3>Résultats</h3>
         </div>
       </div>
       <form id="form">
-        <div class="barNumber">
-          <span></span>
+        <div class="numerotation">
+          <div class="relative">
+            <div class="progressbar">
+
+            </div>
+            <progress id="file" max="22"> </progress>
+          </div>
+          <p id="afficheNum"></p>
         </div>
         <div class="questions">
           <!-- <p class="form__question"> Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs)
@@ -74,6 +81,7 @@
         <div class="inputs">
           <input type="submit" value="precedent" id="precedent">
           <input type="submit" value="suivant" id="suivant">
+          <input type="submit" value="afficher le resultat" id="resultat" class="affiche">
         </div>
       </form>
 

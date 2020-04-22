@@ -26,18 +26,20 @@ const rep = [
   ///// 1 reponce /////
   {
     c:
-      '<input type="number" id="reponce1" min= "34"> <label>°c</label><br><br>',
-    age: '<input type="number" id="reponce1"><label>age</label><br><br></br>',
-    poids: ' <input type="number" id="reponce1"><label>kg</label><br><br></br>',
+      '<div class="inputText"><input type="number" id="reponce1" min= "34"> <label>°c</label></div><br><br>',
+    age:
+      '<div  class="inputText"> <input type="number" id="reponce1"><label>age</label></div><br><br></br>',
+    poids:
+      ' <div  class="inputText"><input type="number" id="reponce1"><label>kg</label></div><br><br></br>',
     taille:
-      '<input type="number" id="reponce1"><label>cm</label size ="10"><br><br></br>',
+      '<div  class="inputText"><input type="number" id="reponce1"><label>cm</label size ="10"></div><br><br></br>',
   },
   /////////// oui non ///////////
-  ' <input type="radio" id="form__choice" name="question"><label for="oui">Oui</label> <br> <input type="radio" id="form__choice" name="question"><label for="non">Non</label><br><br></br>',
+  '<div> <input type="radio" id="form__choice" name="question"><label for="oui">Oui</label><br></div> <div> <input type="radio" id="form__choice" name="question"><label for="non">Non</label><br><br></br></div>',
   /////// 3reponces ////////////
-  ' <input type="radio" id="form__choice" name="question" checked> <label for="oui">Oui</label> <input type="radio" id="form__choice" name="question"> <label for="non">Non</label><input type="radio" id="form__choice" name="question"  ><label for="homme">Homme</label><br><br></br>',
+  ' <div><input type="radio" id="form__choice" name="question" checked> <label for="oui">Oui</label> </div><div> <input type="radio" id="form__choice" name="question"> <label for="non">Non</label> </div><div><input type="radio" id="form__choice" name="question"  ><label for="homme">Homme</label><br><br></br> </div>',
   /////// 4reponces////////////
-  '<input type="radio" id="form__choice" name="question" checked  ><label for="bien">Bien</label><input type="radio" id="form__choice" name="question" > <label for="abien">Assez bien</label>  <input type="radio" id="form__choice" name="question" > <label for="fatigue">Fatigué(e)</label> <input type="radio" id="form__choice" name="question" > <label for="tfatigue">Très fatigué(e)</label><br><br></br>',
+  '<div><input type="radio" id="form__choice" name="question" checked  ><label for="bien">Bien</label></div><div><input type="radio" id="form__choice" name="question" > <label for="abien">Assez bien</label></div><div>  <input type="radio" id="form__choice" name="question" > <label for="fatigue">Fatigué(e)</label></div><div> <input type="radio" id="form__choice" name="question" > <label for="tfatigue">Très fatigué(e)</label><br><br></br></div>',
 ];
 var tabRe = [
   "undefined",
@@ -46,4 +48,4 @@ var tabRe = [
   ["Bien", "Assez bien", "Fatigué", "Très fatigué"],
 ];
 var info = [];
-const resultat = [];
+// const resultat = [];
