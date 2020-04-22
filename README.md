@@ -1,6 +1,6 @@
 # Projet Validation :  C2N3_C3N3
 https://ucef8233.github.io/covid-19/
-https://ucef8233.github.io/montre-js/
+
 ## Contexte pédagogique  👋
 
 C'est un projet pour valider les compétences C3N3 (C2N3). 
