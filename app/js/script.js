@@ -7,23 +7,22 @@ const resultat = document.getElementById("resultat");
 const sect = document.querySelectorAll(".sect");
 const afficheNum = document.getElementById("afficheNum");
 const progress = document.getElementById("file");
-let i = 0;
+var i = 0;
 var oplalla;
 var blan = ["37", "18", "60", "170"];
 var val = 1;
 window.onload = () => {
-  for (let i = 0; i < sect.length; i++) {
-    demarage.addEventListener("click", function () {
-      sect[i].classList.toggle("affiche");
-      precedent.classList.add("affiche");
-      questions.innerHTML = Question[0];
-      choix = document.querySelector(".questions p").className;
-      afficheNum.textContent = "1/" + Question.length;
-      progress.setAttribute("value", val);
-      choisReponce();
-      tcheecked();
-    });
-  }
+  demarage.addEventListener("click", function () {
+    sect[0].classList.add("affiche");
+    sect[1].classList.remove("affiche");
+    precedent.classList.add("affiche");
+    questions.innerHTML = Question[0];
+    choix = document.querySelector(".questions p").className;
+    afficheNum.textContent = "1/" + Question.length;
+    progress.setAttribute("value", val);
+    choisReponce();
+    tcheecked();
+  });
   Qsuivante();
   Qprecedente();
 };

@@ -181,5 +181,150 @@ tcheeckedtext = () => {
   }
 };
 
-///////////////////////: navbar/////////////////:
+resultat js////////////////:
+let facteurPronostique = [];
+let facteurMineur = [];
+let facteurMajeur = [];
+let affichageRes = document.getElementById("affichageResult");
+triReponces = () => {
+  for (let i = 0; i < info.length; i++) {
+    if (i == 1) {
+      facteurMineur.push(info[i]);
+      facteurMajeur.push(info[i]);
+    } else if (i >= 11 && i <= 21) {
+      facteurPronostique.push(info[i]);
+    } else if (i == 7 || i == 8) {
+      facteurMajeur.push(info[i]);
+    } else if (i == 6 || i == 9) {
+      facteurMineur.push(info[i]);
+    }
+  }
+};
+var resultatPronostique = 0;
+var resultatMineur = 0;
+var resultatMajeur = 0;
+trifacteur = () => {
+  for (let i = 0; i < facteurPronostique.length; i++) {
+    if (facteurPronostique[i] == "Oui") {
+      resultatPronostique++;
+    }
+  }
+  for (let i = 0; i < facteurMineur.length; i++) {
+    if (
+      facteurMineur[i] >= 39.7 ||
+      facteurMineur[i] == "Oui" ||
+      facteurMineur[i] == "Fatigué" ||
+      facteurMineur[i] == "Très fatigué"
+    ) {
+      resultatMineur++;
+    }
+  }
+  for (let i = 0; i < facteurMajeur.length; i++) {
+    if (facteurMajeur[i] <= 35.4 || facteurMajeur[i] == "Oui") {
+      resultatMajeur++;
+    }
+  }
+};
+let wayeh = () => {
+  if (info[10] < 15) {
+    affichageRes.innerHTML = tabresult.ans15;
+  }
+  if (
+    info[0] == "Oui" ||
+    (info[2] == "Oui" && info[4] == "Oui") ||
+    (info[2] == "Oui" && info[3] == "Oui") ||
+    (info[0] == "Oui" && info[5] == "Oui")
+  ) {
+    ///Patient avec fièvre, ou toux + mal de gorge, ou toux + courbatures ou fièvre + diarrhée :
+    if (resultatPronostique == 0 && resultatMajeur == 0) {
+      ////Tout patient sans facteur pronostique :
+      if (resultatMineur == 0 && info[10] < 50) {
+        ////Sans facteur de gravité & <50 ans :
+        affichageRes.innerHTML = tabresult.sans;
+      } else if (
+        //////Sans facteur de gravité & 50-69 ans, ou avec au moins un facteur de gravité mineur :
+        resultatMineur <= 3 &&
+        info[10] >= 50 &&
+        info[10] <= 69
+      ) {
+        affichageRes.innerHTML = tabresult.resultat3;
+      }
+    // } else {
+    //   ////Tout patient avec un facteur pronostique ou plus : -----a regrouper 2-----
+    //   if (resultatMineur <= 1 && resultatMajeur == 0) {
+    //     ///Aucun facteur de gravité || Un seul facteur de gravité mineur  -----a regrouper 2-----
+    //     affichageRes.innerHTML = tabresult.resultat3;
+    //   } else if (resultatMineur >= 2 || resultatMajeur == 0) {
+    //     ////Au moins deux facteurs de gravité mineurs  (((((((((((a regrouper1)))))))))))
+    //     affichageRes.innerHTML = tabresult.resultat4;
+    //   }
+    // }
+  }
+  if (
+    info[0] == "Oui" ||
+    (info[2] == "Oui" && info[4] == "Oui") ||
+    (info[2] == "Oui" && info[3] == "Oui") ||
+    (info[0] == "Oui" && info[5] == "Oui") ||
+    (info[0] == "Oui" && info[2] == "Oui")
+  ) {
+    if (resultatPronostique == 0) {
+      if (resultatMajeur == 0 && resultatMineur <= 1) {
+        ///Aucun facteur de gravité ||Un seul facteur de gravité mineur  -----a regrouper 2-----
+        affichageRes.innerHTML = tabresult.resultat3;
+      } else if (resultatMajeur == 0 && resultatMineur >= 2) {
+        ///// Au moins deux facteurs de gravité mineurs (((((((((((a regrouper1)))))))))))
+        affichageRes.innerHTML = tabresult.resultat4;
+      }
+    }
+  }
+    if (info[0] == "Oui" && info[2] == "Oui") {
+      ///// avec fievre et toux
+      if (resultatPronostique == 0) {
+        ///Tout patient sans facteur pronostique :
+        if (resultatMajeur == 0 && resultatMineur >= 1) {
+          ///Sans facteur de gravité ou au moins 1 facteur de gravité mineur sans facteur de gravité majeur
+          affichageRes.innerHTML = tabresult.resultat3;
+        }
+      // } else {
+      //   ///Tout patient avec un facteur pronostique ou plus :  -----a regrouper 2-----
+      //   if (resultatMajeur == 0 && resultatMineur <= 1) {
+      //     ///Aucun facteur de gravité ||Un seul facteur de gravité mineur  -----a regrouper 2-----
+      //     affichageRes.innerHTML = tabresult.resultat3;
+      //   } else if (resultatMajeur == 0 && resultatMineur >= 2) {
+      //     ///// Au moins deux facteurs de gravité mineurs (((((((((((a regrouper1)))))))))))
+      //     affichageRes.innerHTML = tabresult.resultat4;
+      //   }
+      // }
+    }
+  if (
+    info[0] == "Oui" ||
+    info[2] == "Oui" ||
+    info[3] == "Oui" ||
+    info[4] == "Oui"
+  ) {
+    ///Tout patient avec un seul symptôme parmi fièvre, toux, mal de gorge, courbatures :
+    if (resultatPronostique == 0) {
+      /////Pas de facteur de gravité :
+      affichageRes.innerHTML = tabresult.resultat5;
+    } else if (
+      resultatPronostique == 0 &&
+      (resultatMajeur > 0 || resultatMineur > 0)
+    ) {
+      /////Au moins un facteur de gravité ou un facteur pronostique :
+      affichageRes.innerHTML = tabresult.resultat5;
+      affichageRes.innerHTML = tabresult.resultat4;
+    }
+  }
+};
+let resFinal = () => {
+  resultat.addEventListener("click", function (e) {
+    sect[1].classList.add("affiche");
+    sect[2].classList.remove("affiche");
+    triReponces(info);
+    trifacteur();
+    wayeh();
+    e.preventDefault();
+  });
+};
+
 
