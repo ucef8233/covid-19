@@ -1,195 +1,100 @@
-const questions = document.querySelector(".questions");
-const repon = document.querySelector(".reponces");
-const suivant = document.getElementById("suivant");
-const precedent = document.getElementById("precedent");
-const demarage = document.getElementById("demarer");
-const resultat = document.getElementById("resultat");
-const sect = document.querySelectorAll(".sect");
-const afficheNum = document.getElementById("afficheNum");
-const progress = document.getElementById("file");
-var i = 0;
-var oplalla;
-var blan = ["37", "18", "60", "170"];
+var conter = 0;
+var reponces = [];
 var val = 1;
 window.onload = () => {
-  demarage.addEventListener("click", function () {
-    sect[0].classList.add("affiche");
-    sect[1].classList.remove("affiche");
-    precedent.classList.add("affiche");
-    questions.innerHTML = Question[0];
-    choix = document.querySelector(".questions p").className;
-    afficheNum.textContent = "1/" + Question.length;
-    progress.setAttribute("value", val);
-    choisReponce();
-    tcheecked();
+  $("#demarer").click(() => {
+    $(".main__inform").css("display", "none");
+    $("#precedent").css("display", "none");
+    $(".main__questionnaire").css("display", "block");
+    $(".questions").html(Question[conter]);
+    // $("#suivant").attr("disabled", "disabled");
+    bar(0);
+    recupValue();
   });
-  Qsuivante();
-  Qprecedente();
+  qSuivante();
+  qPrecedente();
 };
 
-Qsuivante = () => {
-  suivant.addEventListener("click", function (e) {
-    reponces = document.querySelectorAll("#form__choice");
-    precedent.classList.remove("affiche");
-    if (i >= 0 && i < Question.length - 1) {
-      i++;
-      val++;
+bar = (e) => {
+  $("#afficheNum").text(e + 1 + "/" + Question.length);
+  $("#file").attr("value", conter + 1);
+};
+qSuivante = () => {
+  $("#suivant").click((e) => {
+    // $("#suivant").attr("disabled", "disabled");
+    if (conter >= 0 && conter < Question.length - 1) {
+      conter++;
     }
-    if (i == Question.length - 1) {
-      suivant.classList.add("affiche");
-      resultat.classList.remove("affiche");
+    if (conter == Question.length - 1) {
+      $("#suivant").css("display", "none");
+      $("#resultat").css("display", "block");
     }
-    k = i + 1;
-    afficheNum.textContent = k + "/" + Question.length;
-    progress.setAttribute("value", val);
-    questions.innerHTML = Question[i];
-    choix = document.querySelector(".questions p").className;
+    $("#precedent").css("display", "block");
+    $(".questions").html(Question[conter]);
+    recupValue();
+    bar(conter);
     e.preventDefault();
-    choisReponce();
-    tcheecked();
-    tcheeckedtext();
   });
 };
-
-Qprecedente = () => {
-  precedent.addEventListener("click", function (e) {
-    suivant.classList.remove("affiche");
-    resultat.classList.add("affiche");
-    if (i > 0) {
-      i--;
-      val--;
+qPrecedente = () => {
+  $("#precedent").click((e) => {
+    if (conter > 0) {
+      conter--;
     }
-    if (i == 0) {
-      precedent.classList.add("affiche");
+    if (conter == 0) {
+      $("#precedent").css("display", "none");
     }
-    k = i + 1;
-    afficheNum.textContent = k + "/" + Question.length;
-    progress.setAttribute("value", val);
-    questions.innerHTML = Question[i];
-    choix = document.querySelector(".questions p").className;
+    $(".questions").html(Question[conter]);
+    recupValue();
+    bar(conter);
     e.preventDefault();
-    choisReponce();
-    tcheecked();
-    tcheeckedtext();
   });
 };
-choisReponce = () => {
-  switch (choix) {
-    case "form__question--c":
-      repon.innerHTML = rep[0].c;
-      case0();
-      break;
-    case "form__question--age":
-      repon.innerHTML = rep[0].age;
-      case0();
-      break;
-    case "form__question--poids":
-      repon.innerHTML = rep[0].poids;
-      case0();
-      break;
-    case "form__question--taille":
-      repon.innerHTML = rep[0].taille;
-      case0();
-      break;
-    case "form__question":
-      repon.innerHTML = rep[1];
-      spliceReponce(1);
-      break;
-    case "form__question--trois":
-      repon.innerHTML = rep[2];
-      spliceReponce(2);
-      break;
-    case "form__question--quatre":
-      repon.innerHTML = rep[3];
-      spliceReponce(3);
-      break;
-  }
-};
-
-spliceReponce = (e) => {
-  reponces = document.querySelectorAll("#form__choice");
-  if (info[i] == undefined) {
-    info.splice(i, 1, tabRe[e][0]);
-  } else {
-    info.splice(i, 1, info[i]);
-  }
-
-  for (let k = 0; k < reponces.length; k++) {
-    reponces[k].addEventListener("click", function () {
-      if (reponces[k].checked) {
-        info.splice(i, 1, tabRe[e][k]);
+recupValue = () => {
+  $(".questions div input").click(() => {
+    $("#suivant").removeAttr("disabled");
+    if ($(".questions div input").length === 1) {
+      reponces.splice(conter, 1, $(".questions div input").val());
+    } else {
+      for (key in $(".questions div input")) {
+        if ($(".questions div input")[key].checked == true) {
+          reponces.splice(conter, 1, $(".questions div input")[key].value);
+        }
       }
-    });
-  }
-};
-tcheecked = () => {
-  if (info[i] == "Oui" || info[i] == "Bien") {
-    reponces[0].setAttribute("checked", "checked");
-  } else if (info[i] == "Non" || info[i] == "Assez bien") {
-    reponces[1].setAttribute("checked", "checked");
-  } else if (info[i] == "Homme" || info[i] == "Fatigué") {
-    reponces[2].setAttribute("checked", "checked");
-  } else if (info[i] == "Très fatigué") {
-    reponces[3].setAttribute("checked", "checked");
-  }
-};
-case0 = () => {
-  reponces = document.querySelectorAll("#form__choice");
-  oplalla = document.getElementById("reponce1");
-  // for (let k = 0; k < 4; k++) {
-  oplalla.addEventListener("change", function (e) {
-    info.splice(i, 1, e.target.value);
-    switch (choix) {
-      case "form__question--c":
-        blan.splice(0, 1, e.target.value);
-        break;
-      case "form__question--age":
-        blan.splice(1, 1, e.target.value);
-        break;
-      case "form__question--poids":
-        blan.splice(2, 1, e.target.value);
-        break;
-      case "form__question--taille":
-        blan.splice(3, 1, e.target.value);
-        break;
     }
   });
-  if (oplalla.value == "") {
-    switch (choix) {
-      case "form__question--c":
-        info.splice(i, 1, blan[0]);
-        break;
-      case "form__question--age":
-        info.splice(i, 1, blan[1]);
-        break;
-      case "form__question--poids":
-        info.splice(i, 1, blan[2]);
-        break;
-      case "form__question--taille":
-        info.splice(i, 1, blan[3]);
-        break;
-    }
-  }
-  // }
 };
-tcheeckedtext = () => {
-  oplalla = document.getElementById("reponce1");
-  if (reponces.length == 0) {
-    switch (choix) {
-      case "form__question--c":
-        oplalla.value = blan[0];
-        break;
-      case "form__question--age":
-        oplalla.value = blan[1];
-        break;
-      case "form__question--poids":
-        oplalla.value = blan[2];
-        break;
-      case "form__question--taille":
-        oplalla.value = blan[3];
-        break;
-    }
-  }
-};
-
-///////////////////////: navbar/////////////////:
+$("#resultat").click((e) => {
+  e.preventDefault();
+  $(".main__questionnaire").css("display", "none");
+  $(".main__Resultat").css("display", "block");
+  triReponces();
+  trifacteur();
+  wayeh();
+  $("#repeter").css("display", "block");
+});
+$("#repeter").click(() => {
+  $(".main__questionnaire").css("display", "block");
+  $(".main__Resultat").css("display", "none");
+  facteurs = {
+    facteurPronostique: [],
+    facteurMineur: [],
+    facteurMajeur: [],
+    tabSymptom: [],
+  };
+  resultats = {
+    resultatPronostique: 0,
+    resultatMineur: 0,
+    resultatMajeur: 0,
+    symptome: 0,
+  };
+  conter = 0;
+  reponces = [];
+  val = 1;
+  $(".questions").html(Question[conter]);
+  $("#resultat").css("display", "none");
+  $("#precedent").css("display", "none");
+  $("#suivant").css("display", "block");
+  bar(0);
+  recupValue();
+});
