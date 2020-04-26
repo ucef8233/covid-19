@@ -13,6 +13,24 @@
 <body>
   <!-- HEADER -->
   <header class="header">
+    <nav>
+      <div class="header__logo"> <img src="../Design/Assets/png/logo__sante-17@2x.png" alt=" Ministère de la Santé"
+          title="Ministère de la Santé"></div>
+      <div class="header__menu" id="active">
+        <a href="conseils.html" class="tahada">Conseil</a>
+        <a href="index.html" class="tahada active">Accueil</a>
+        <a href="#"><img src="../Design/Assets/png/language_switch.png" alt="image changement de langage"> </a>
+      </div>
+    </nav>
+    <div class="header__text">
+      <h3 class="header__title">LA DERNIÈRE INFO MÉDICALE </h3>
+      <p class="header__parag">La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur
+        d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol. <br> N'arrêtez pas votre traitement
+        !
+        Consultez
+        votre médecin ou votre pharmacien. </p>
+    </div>
+    <nav>
   </header>
   <main class="main__404">
     <img src="/Design/Assets/png/404.png" alt="image erreur 404" title="erreur 404">
@@ -32,12 +50,6 @@
     $('.footer__contacte').load("footer__.html");
   });
 </script>
-<script>
-  $(document).ready(function () {
-    $('header').load("header.html");
-  });
-</script>
-
 <!-- end script -->
 
 </html>
