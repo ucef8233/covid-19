@@ -51,7 +51,7 @@ qPrecedente = () => {
   });
 };
 recupValue = () => {
-  $(".questions div input").click(() => {
+  $(".questions div input").change(() => {
     $("#suivant").removeAttr("disabled");
     if ($(".questions div input").length === 1) {
       reponces.splice(conter, 1, $(".questions div input").val());
@@ -89,7 +89,6 @@ $("#repeter").click(() => {
     symptome: 0,
   };
   conter = 0;
-  reponces = [];
   val = 1;
   $(".questions").html(Question[conter]);
   $("#resultat").css("display", "none");
@@ -98,3 +97,15 @@ $("#repeter").click(() => {
   bar(0);
   recupValue();
 });
+
+// `<p class="form__question"> Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ? </p>
+//   <div class="answer-inputs">
+//     <div>
+//         <input type="radio" name="Q1" id="Oui" value="Oui">
+//         <label for="Oui"><span>Oui</span> </label>
+//     </div>
+//     <div>
+//         <input type="radio" name="Q1" id="Non" value="Non">
+//         <label for="Non"><span>Non</span> </label>
+//     </div>
+//   </div>`;
