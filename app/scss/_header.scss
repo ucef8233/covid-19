@@ -19,6 +19,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 99;
     top: 0;
     width: 100%;
   }
@@ -34,7 +35,7 @@
   }
 
   &__text {
-  
+
     background: url("../../Design/Assets/png/En\ chiffres-24.png") no-repeat center/cover;
     text-align: center;
     line-height: 2;
