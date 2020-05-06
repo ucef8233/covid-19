@@ -7,7 +7,7 @@ window.onload = () => {
     $("#precedent").css("display", "none");
     $(".main__questionnaire").css("display", "block");
     $(".questions").html(Question[conter]);
-    // $("#suivant").attr("disabled", "disabled");
+    $("#suivant").attr("disabled", "disabled");
     bar(0);
     recupValue();
   });
@@ -21,7 +21,7 @@ bar = (e) => {
 };
 qSuivante = () => {
   $("#suivant").click((e) => {
-    // $("#suivant").attr("disabled", "disabled");
+    $("#suivant").attr("disabled", "disabled");
     if (conter >= 0 && conter < Question.length - 1) {
       conter++;
     }
@@ -94,21 +94,10 @@ $("#repeter").click(() => {
   $("#resultat").css("display", "none");
   $("#precedent").css("display", "none");
   $("#suivant").css("display", "block");
+  $("#suivant").attr("disabled", "disabled");
   bar(0);
   recupValue();
 });
-
-// `<p class="form__question"> Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ? </p>
-//   <div class="answer-inputs">
-//     <div>
-//         <input type="radio" name="Q1" id="Oui" value="Oui">
-//         <label for="Oui"><span>Oui</span> </label>
-//     </div>
-//     <div>
-//         <input type="radio" name="Q1" id="Non" value="Non">
-//         <label for="Non"><span>Non</span> </label>
-//     </div>
-//   </div>`;
 
 let facteurs = {
   facteurPronostique: [],
