@@ -1,5 +1,5 @@
 # Projet Validation :  C2N3_C3N3
-https://ucef8233.github.io/covid-19/
+
 
 ## Contexte pédagogique  👋
 
